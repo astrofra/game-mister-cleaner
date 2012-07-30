@@ -1,0 +1,13 @@
+<NML=1.0>
+<Environment=
+	<Name="AGFX_game_RLC">
+	<Authors="AndyGFX">
+	<Description="New project">
+	<Copyright="Copyright 2011">
+	<ScriptUnit=
+		<Script="scripts/project/agfx_game_rlc.nut">
+		<Class="AGFX_game_RLC">
+	>
+	<Include>
+	<SearchPaths>
+>
