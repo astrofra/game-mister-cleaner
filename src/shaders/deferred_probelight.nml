@@ -1,0 +1,81 @@
+<NML = 1.0>
+
+<Probelight =
+	<Vertex = "
+		varying	vec3		forward;
+		varying vec3 view;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+			view = normalize(gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+		varying vec3 view;
+
+		uniform mat3		view_rmtx;
+		uniform	vec2		inverse_buffer_size, display_buffer_ratio;
+		uniform	float		view_depth_offset;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2, gbuffer3;
+		uniform sampler2D	radiance_probe, irradiance_probe;
+
+		#(UnpackNormalDepth)
+
+		vec2	NormalToProbeUV(vec3 n)
+		{
+			n = normalize(n);
+
+			float	r = (1.0 / 3.1415926535) * acos(-n.z) / sqrt(n.x * n.x + n.y * n.y);
+			vec2	wUV = n.xy * r;
+
+			wUV = wUV * 0.5 + 0.5;
+			wUV.y = 1.0 - wUV.y;
+			return wUV;
+		}
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+
+			if	(norm_dpth.z == 0.0)
+				gl_FragColor = diff_alpha; 
+
+			else
+			{
+				vec4	spec_glos = texture2D(gbuffer2, UV);
+	
+				// World normal to probe.
+				vec3	wnm = norm_dpth.xyz * view_rmtx;
+	
+				// Irradiance sampling.
+				vec2	wUV = NormalToProbeUV(wnm);
+				vec3	irr = texture2D(irradiance_probe, wUV).xyz;
+	
+				// Reflection vector.
+				vec3	frag = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+	
+				vec3	wvdt = normalize(frag * view_rmtx);
+				vec3	wrv = normalize(reflect(wvdt, wnm));
+	
+				// Specular sampling.
+				vec2	sUV = NormalToProbeUV(wrv);
+/*
+				vec3	spr = vec3(0.0, 0.0, 0.0);
+				for	(float y = 0.0; y < 1.0; y += 0.334)
+					for	(float x = 0.0; x < 1.0; x += 0.334)
+						spr += texture2D(radiance_probe, sUV + (vec2(x, y) - vec2(0.5, 0.5)) * spec_glos.w).xyz;
+				spr /= 9.0;
+*/
+				vec3	spr = texture2D(radiance_probe, sUV).xyz;
+	
+				vec4	cons_resv = texture2D(gbuffer3, UV);
+				gl_FragColor = vec4(cons_resv.rgb + (irr + gl_LightModel.ambient.rgb) * diff_alpha.rgb + spr * spec_glos.rgb, diff_alpha.a);
+			}
+		}
+	">
+>

@@ -1,0 +1,704 @@
+<NML=1.0>
+<Scene=
+	<Items=
+		<MObject=
+			<MItem=
+				<Id="zentrum_body_skinned">
+				<UId=0>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="computer_zentrum_skin_anim">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=29>
+									<Data==589:580@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+]]Ýi****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+]]Ýi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****8ç+]]Ýi8ç>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=-0.034892>
+					>
+					<Rotation=
+						<X=-1.570796>
+						<Y=0.000000>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/zentrum_body_skinned.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="zentrum_eyes">
+				<UId=23>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="computer_zentrum_skin_anim">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=29>
+									<Data==589:580@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+]]Ýi****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****¯wi+]]Ýi¯wi>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****µ¾è+]]Ýiµ¾è>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.182311>
+						<Y=-0.000000>
+						<Z=0.353357>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=0.000000>
+						<Z=1.570796>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/zentrum_eyes.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="_Bip01">
+				<UId=24>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="computer_zentrum_skin_anim">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=29>
+									<Data==589:580@
+****))è1**é1**é))h÷övg))è1**é1**é))h÷öög))è1**é1**é))hÄÃCh
+))è1**é1**é))h÷övh))è1**é1**é))h**ªh))è1**é1**é))hÄÃÃh))è
+1**é1**é))h]]Ýh))è1**é1**é))h÷ööh))è1**é1**é))hh))è1**é
+1**é))h***i))è1**é1**é))h÷ö6i))è1**é1**é))hÄÃCi))è1**é1**é
+))hPi))è1**é1**é))h]]]i))è1**é1**é))h**ji))è1**é1**é))h
+÷övi))è1**é1**é))hÄÃƒi))è1**é1**é))hi))è1**é1**é))h]]i
+))è1**é1**é))h**ªi))è1**é1**é))h°i))è1**é1**é))h÷ö¶i))è
+1**é1**é))h]]½i))è1**é1**é))hÄÃÃi))è1**é1**é))h**Êi))è1**é
+1**é))hÐi))è1**é1**é))h÷öÖi))è1**é1**é))h]]Ýi))è1**é1**é
+))h>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****öØÛ+]]ÝiöØÛ>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ØÕãi+]]ÝiØÕãi>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****Túç+]]ÝiTúç>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+]]Ýi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000000>
+						<Y=1.450552>
+						<Z=-0.116120>
+					>
+					<Rotation=
+						<X=-1.570796>
+						<Y=0.000000>
+						<Z=-1.570798>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Zentrum Engine">
+				<UId=27>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000246>
+						<Y=-0.070496>
+						<Z=2.310075>
+					>
+					<Rotation=
+						<X=-1.570796>
+						<Y=-2.087586>
+						<Z=-1.022697>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/zentrum_engine.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="shadow">
+				<UId=28>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000004>
+						<Y=-0.000000>
+						<Z=-0.032488>
+					>
+					<Rotation=
+						<X=-1.570796>
+						<Y=3.141371>
+						<Z=3.141397>
+					>
+					<Scale=
+						<X=0.125000>
+						<Y=0.125000>
+						<Z=0.125000>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/indus_dirt_shadow.nmg">
+			>
+		>
+		<MLight=
+			<MItem=
+				<Id="New Light">
+				<UId=29>
+				<Active>
+				<Helper>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Light=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=3.073856>
+						<Z=-1.244742>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<ShadowBias=0.010000>
+				<ShadowDistribution=0.900000>
+				<VolumetricSampleStep=0.500000>
+				<VolumetricThick=1.000000>
+				<VolumetricRange=8.000000>
+			>
+		>
+	>
+	<Links=
+		<Link=
+			<Item=23>
+			<Link=24>
+		>
+		<Link=
+			<Item=27>
+			<Link=0>
+		>
+		<Link=
+			<Item=28>
+			<Link=27>
+		>
+	>
+	<Skins=
+		<Skin=
+			<UId=0>
+		>
+	>
+	<Constraints>
+	<Groups=
+		<Group=
+			<Id="Biped">
+			<Item=27>
+			<Item=24>
+		>
+	>
+	<Globals=
+		<BackgroundColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<AmbientColor=
+			<X=0.400000>
+			<Y=0.400000>
+			<Z=0.400000>
+		>
+		<AmbientIntensity=1.000000>
+		<TargetExposure=0.250000>
+		<FogNear=0.000000>
+		<FogFar=0.000000>
+		<FogColor=
+			<X=1.000000>
+			<Y=1.000000>
+			<Z=1.000000>
+		>
+	>
+	<Physics=
+		<Frequency=59.999996>
+	>
+	<ViewMatrix=
+		<R0=
+			<X=0.927822>
+			<Y=-0.000000>
+			<Z=-0.373024>
+			<W=0.000000>
+		>
+		<R1=
+			<X=0.129784>
+			<Y=0.937522>
+			<Z=0.322812>
+			<W=0.000000>
+		>
+		<R2=
+			<X=0.349719>
+			<Y=-0.347925>
+			<Z=0.869854>
+			<W=0.000000>
+		>
+		<R3=
+			<X=-1.348699>
+			<Y=3.303965>
+			<Z=-3.726477>
+			<W=1.000000>
+		>
+	>
+>
+<Editor=
+	<View=
+		<Layout="Single">
+		<Viewport=
+			<Index=0>
+			<Camera="@Perspective">
+			<Matrix=
+				<R0=
+					<X=0.927822>
+					<Y=-0.000000>
+					<Z=-0.373024>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.129784>
+					<Y=0.937522>
+					<Z=0.322812>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.349719>
+					<Y=-0.347925>
+					<Z=0.869854>
+					<W=0.000000>
+				>
+				<R3=
+					<X=-1.348699>
+					<Y=3.303965>
+					<Z=-3.726477>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=1>
+			<Camera="@Top">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=-1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=2>
+			<Camera="@Bottom">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=-10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=3>
+			<Camera="@Left">
+			<Matrix=
+				<R0=
+					<X=-0.000000>
+					<Y=0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=-10.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+	>
+>

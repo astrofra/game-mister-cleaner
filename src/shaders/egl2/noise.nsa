@@ -1,0 +1,18 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+
+		<Uniform=<Name="u_mvp"><Semantic="ModelViewProjectionMatrix">>
+		<Uniform=<Name="u_tex"><Semantic="NativeTexture">>
+		<Uniform=<Name="u_noise"><Semantic="NoiseMap">>
+		<Uniform=<Name="u_ibs"><Semantic="InverseBufferSize">>
+
+		<Uniform=<Name="u_strength"><Semantic="User">>
+		<Uniform=<Name="u_mono"><Semantic="User">>
+		<Uniform=<Name="u_bias"><Semantic="User">>
+		<Uniform=<Name="u_random"><Semantic="User">>
+	>
+	<Vertex="@core/shaders/egl2/simple_v.txt">
+	<Fragment="@core/shaders/egl2/noise_f.txt">
+>

@@ -1,0 +1,55 @@
+varying	vec2		forward;
+
+uniform	vec2		u_ibs, u_ar;
+uniform	float		u_vdo, u_lsb, u_iss, u_zf;
+uniform vec3		u_lvd, u_diffc, u_specc, u_shadowc;
+
+uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2, u_noise;
+
+uniform	sampler2DShadow pssm;
+uniform	mat4		pssm_0_projection_matrix, pssm_1_projection_matrix, pssm_2_projection_matrix, pssm_3_projection_matrix;
+uniform	float		pssm_0_slice_distance, pssm_1_slice_distance, pssm_2_slice_distance, pssm_3_slice_distance;
+
+#(ComputePCF)
+#(UnpackNormalDepth)
+
+void	main()
+{
+	vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * u_ibs;
+
+	vec4	norm_dpth = UnpackNormalDepth(UV);
+	if	(norm_dpth.z == 0.0)
+		gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+
+	else
+	{
+		vec3	cforward = vec3(forward / (u_zf * u_ar), 1.0);
+		vec3	frag_viewpos = cforward * (norm_dpth.w + u_vdo - u_lsb);
+
+		// Evaluate PCF on the shadow map corresponding to this fragment slice.
+		float	pcf = 1.0;
+		#(DispatchPSSM)
+
+		if	(pcf > 0.0)
+		{
+			frag_viewpos = cforward * (norm_dpth.w + u_vdo);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			float	idiff = max(-dot(u_lvd, normal), 0.0);
+
+			// Light specular contribution.
+			vec4	spec_glos = texture2D(gbuffer2, UV);
+			vec3	e = reflect(normalize(frag_viewpos), normal);
+			float	ispec = pow(max(-dot(u_lvd, normalize(e)), 0.0), spec_glos.w * 96.0);
+
+			// Full contribution.
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			gl_FragColor = vec4(mix(u_shadowc, diff_alpha.rgb * u_diffc * idiff + spec_glos.rgb * u_specc * ispec, pcf), 1.0);
+		}
+		else
+			gl_FragColor = vec4(u_shadowc, 1.0);
+	}
+}

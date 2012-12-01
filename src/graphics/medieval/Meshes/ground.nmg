@@ -1,0 +1,377 @@
+<NML=1.0>
+<Geometry=
+	<Vertex=
+		<Count=25>
+		<Data==304:300@
+**Êê¨§ÚÏ**Êê**Jê¨§ÚÏ**Êê¨§ZÐ¨§ÚÏ**Êê**Jj¨§ÚÏ**Êê**Êj¨§ÚÏ**Êê**Êê
+¨§ZÏ**Jê**Jê¨§ZÏ**Jê¨§ÚÏ¨§ZÏ**Jê**Jj¨§ZÏ**Jê**Êj¨§ZÏ**Jê**Êê****
+¨§ZP**Jê****¨§ÚO**************Jj****¨§ÚÏ**Êj****¨§ZÐ**Êê¨§ZO**Jj
+**Jê¨§ZO**Jj¨§ÚO¨§ZO**Jj**Jj¨§ZO**Jj**Êj¨§ZO**Jj**Êê¨§ÚO**Êj**Jê
+¨§ÚO**Êj¨§ZP¨§ÚO**Êj**Jj¨§ÚO**Êj**Êj¨§ÚO**Êj>
+	>
+	<Polygon=
+		<Count=16>
+		<BindingCount=64>
+		<Data==392:384@
+.***0***+*******/*******.***1***,***+***0*******.***2***-***,***
+1*******.***3***.***-***2*******.***5***0***/***4*******.***6***
+1***0***5*******.***7***2***1***6*******.***8***3***2***7*******
+.***:***5***4***9*******.***;***6***5***:*******.***<***7***6***
+;*******.***=}***8***7***<*******.***?***:***9***>*******.***@**
+*;***:***?*******.***A***<***;***@*******.***B***=}***<***A*****
+**>
+	>
+	<PNormal=
+		<Count=16>
+		<Data==48:48@
+*©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©*>
+	>
+	<VNormal=
+		<Count=64>
+		<Data==194:192@
+*©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**
+©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©
+**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©**©*>
+	>
+	<VTangent=
+		<Count=64>
+		<Data==389:384@
+©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«©***
+*«©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«©*
+***«©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«
+©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«©***
+*«©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«©*
+***«©****«©****«©****«©****«©****«©****«©****«©****«©****«©****«>
+	>
+	<UV=
+		<Count=1>
+		<Data==519:512@
+**ªh**ji**ªh**ªi******ªi******ji***i**ji***i**ªi**ªh**ªi**ªh**ji
+**ji**ji**ji**ªi***i**ªi***i**ji**ªi**ji**ªi**ªi**ji**ªi**ji**ji
+**ªh***i**ªh**ji******ji*******i***i***i***i**ji**ªh**ji**ªh***i
+**ji***i**ji**ji***i**ji***i***i**ªi***i**ªi**ji**ji**ji**ji***i
+**ªh**ªh**ªh***i*******i******ªh***i**ªh***i***i**ªh***i**ªh**ªh
+**ji**ªh**ji***i***i***i***i**ªh**ªi**ªh**ªi***i**ji***i**ji**ªh
+**ªh******ªh**ªh******ªh***********i*******i**ªh**ªh**ªh**ªh****
+**ji******ji**ªh***i**ªh***i******ªi******ªi**ªh**ji**ªh**ji****>
+	>
+	<Materials=
+		<Material=
+			<Id="ground">
+			<Specular=
+				<X=0.900000>
+				<Y=0.900000>
+				<Z=0.900000>
+			>
+			<Glossiness=0.083333>
+			<AlphaThreshold=0.100000>
+			<PhysicMaterial=
+				<StaticFriction=0.750000>
+				<DynamicFriction=0.500000>
+				<Restitution=0.100000>
+			>
+			<RenderMask=
+				<Smoothing>
+				<NormalMapTangent>
+			>
+			<ShaderMap=
+				<Pos=
+					<X=0.000000>
+					<Y=0.000000>
+				>
+				<Map=
+					<Entry=
+						<Type="Normalize">
+						<Pos=
+							<X=320.000000>
+							<Y=-374.000000>
+						>
+						<Param>
+					>
+					<Entry=
+						<Type="Multiply">
+						<Pos=
+							<X=480.000000>
+							<Y=-381.000000>
+						>
+						<Param>
+					>
+					<Entry=
+						<Type="Geometry Tangent Frame">
+						<Pos=
+							<X=640.000000>
+							<Y=-399.000000>
+						>
+						<Param>
+					>
+					<Entry=
+						<Type="Unpack color to vector">
+						<Pos=
+							<X=640.000000>
+							<Y=-349.000000>
+						>
+						<Param>
+					>
+					<Entry=
+						<Type="Swizzle">
+						<Pos=
+							<X=800.000000>
+							<Y=-422.000000>
+						>
+						<Param=
+							<Swizzle="xyzn">
+						>
+					>
+					<Entry=
+						<Type="Sampler 2D">
+						<Pos=
+							<X=960.000000>
+							<Y=-399.000000>
+						>
+						<Param=
+							<WrapU=True>
+							<WrapV=True>
+						>
+					>
+					<Entry=
+						<Type="Texture">
+						<Pos=
+							<X=1120.000000>
+							<Y=-478.000000>
+						>
+						<Param=
+							<Texture="graphics/medieval/Maps/ground_dust_normal.jpg">
+						>
+					>
+					<Entry=
+						<Type="Multiply">
+						<Pos=
+							<X=1159.000000>
+							<Y=-253.000000>
+						>
+						<Param>
+					>
+					<Entry=
+						<Type="Geometry UV">
+						<Pos=
+							<X=1435.000000>
+							<Y=-410.000000>
+						>
+						<Param=
+							<Channel=0>
+						>
+					>
+					<Entry=
+						<Type="Constant">
+						<Pos=
+							<X=1448.000000>
+							<Y=-163.000000>
+						>
+						<Param=
+							<Type=8>
+							<Value=
+								<X=4.000000>
+								<Y=4.000000>
+								<Z=0.000000>
+								<W=0.000000>
+							>
+						>
+					>
+					<Entry=
+						<Type="Sampler 2D">
+						<Pos=
+							<X=320.000000>
+							<Y=-125.000000>
+						>
+						<Param=
+							<WrapU=True>
+							<WrapV=True>
+						>
+					>
+					<Entry=
+						<Type="Texture">
+						<Pos=
+							<X=480.000000>
+							<Y=-204.000000>
+						>
+						<Param=
+							<Texture="graphics/medieval/Maps/ground_dust_color.jpg">
+						>
+					>
+					<Entry=
+						<Type="Sampler 2D">
+						<Pos=
+							<X=320.000000>
+							<Y=165.000000>
+						>
+						<Param=
+							<WrapU=True>
+							<WrapV=True>
+						>
+					>
+					<Entry=
+						<Type="Texture">
+						<Pos=
+							<X=480.000000>
+							<Y=86.000000>
+						>
+						<Param=
+							<Texture="graphics/medieval/Maps/ground_dust_spec.jpg">
+						>
+					>
+					<Entry=
+						<Type="Material Parameter">
+						<Pos=
+							<X=320.000000>
+							<Y=360.000000>
+						>
+						<Param=
+							<Param=4>
+						>
+					>
+					<Entry=
+						<Type="Material Parameter">
+						<Pos=
+							<X=320.000000>
+							<Y=456.000000>
+						>
+						<Param=
+							<Param=2>
+						>
+					>
+					<Entry=
+						<Type="Material Parameter">
+						<Pos=
+							<X=320.000000>
+							<Y=552.000000>
+						>
+						<Param=
+							<Param=5>
+						>
+					>
+				>
+				<Normal=
+					<Block=
+						<Index=0>
+						<Input=
+							<Block=
+								<Index=1>
+								<Input=
+									<Block=
+										<Index=2>
+									>
+									<Block=
+										<Index=3>
+										<Input=
+											<Block=
+												<Index=4>
+												<Input=
+													<Block=
+														<Index=5>
+														<Input=
+															<Block=
+																<Index=6>
+															>
+															<Block=
+																<Index=7>
+																<Input=
+																	<Block=
+																		<Index=8>
+																	>
+																	<Block=
+																		<Index=9>
+																	>
+																>
+															>
+														>
+													>
+												>
+											>
+										>
+									>
+								>
+							>
+						>
+					>
+				>
+				<Diffuse=
+					<Block=
+						<Index=10>
+						<Input=
+							<Block=
+								<Index=11>
+							>
+							<Block=
+								<Index=7>
+								<Input=
+									<Block=
+										<Index=8>
+									>
+									<Block=
+										<Index=9>
+									>
+								>
+							>
+						>
+					>
+				>
+				<Specular=
+					<Block=
+						<Index=12>
+						<Input=
+							<Block=
+								<Index=13>
+							>
+							<Block=
+								<Index=7>
+								<Input=
+									<Block=
+										<Index=8>
+									>
+									<Block=
+										<Index=9>
+									>
+								>
+							>
+						>
+					>
+				>
+				<Glossiness=
+					<Block=
+						<Index=14>
+					>
+				>
+				<Constant=
+					<Block=
+						<Index=15>
+					>
+				>
+				<Opacity=
+					<Block=
+						<Index=16>
+					>
+				>
+			>
+			<TextureStage=
+				<Index=0>
+				<Active>
+				<Texture="graphics/medieval/Maps/ground_dust_color.jpg">
+				<UV=0>
+			>
+			<TextureStage=
+				<Index=1>
+				<Active>
+				<Texture="graphics/medieval/Maps/ground_dust_spec.jpg">
+				<UV=0>
+				<Channel="Specular">
+			>
+			<TextureStage=
+				<Index=2>
+				<Active>
+				<Texture="graphics/medieval/Maps/ground_dust_normal.jpg">
+				<UV=0>
+				<Channel="Normal">
+			>
+		>
+	>
+>

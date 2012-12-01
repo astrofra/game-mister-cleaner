@@ -1,0 +1,11 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+		<Attribute=<Name="a_uv"><Semantic="UV0">>
+		<Uniform=<Name="u_tex"><Semantic="NativeTexture">>
+		<Uniform=<Name="u_fx_scale"><Semantic="FxScale">>
+	>
+	<Vertex="@core/shaders/egl2/single_texture_v.txt">
+	<Fragment="@core/shaders/egl2/single_texture_fx_f.txt">
+>

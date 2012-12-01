@@ -1,0 +1,17 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+
+		<Uniform=<Name="u_source"><Semantic="NativeTexture">>
+		<Uniform=<Name="u_ibs"><Semantic="InverseBufferSize">>
+		<Uniform=<Name="u_fx_scale"><Semantic="FxScale">>
+		
+		<Uniform=<Name="u_scale"><Semantic="User">>
+		<Uniform=<Name="u_pass"><Semantic="User">>
+		<Uniform=<Name="u_attenuation"><Semantic="User">>
+		<Uniform=<Name="u_blur_d"><Semantic="User">>
+	>
+	<Vertex="@core/shaders/egl2/position_no_transform_v.txt">
+	<Fragment="@core/shaders/egl2/fx_blur_f.txt">
+>

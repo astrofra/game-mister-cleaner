@@ -1,0 +1,132 @@
+<NML = 1.0>
+
+<LinearLight =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size,
+							inverse_projection_2d,
+							display_buffer_ratio;
+
+		uniform	float		view_depth_offset;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							direction_view_space;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+
+		#(UnpackNormalDepth)
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			float	idiff = max(-dot(direction_view_space, normal), 0.0);
+
+			// Light specular contribution.
+			vec4	spec_glos = texture2D(gbuffer2, UV);
+			vec3	e = reflect(normalize(frag_viewpos), normal);
+			float	ispec = pow(max(-dot(direction_view_space, normalize(e)), 0.0), spec_glos.w * 96.0);
+
+			// Full contribution.
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			gl_FragColor = vec4(diff_alpha.rgb * diffuse_color * idiff + spec_glos.rgb * specular_color * ispec, 1.0);
+		}
+	">
+>
+
+<LinearLightPSSM =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size,
+							inverse_projection_2d,
+							display_buffer_ratio;
+
+		uniform	float		view_depth_offset,
+							inverse_shadowmap_size,
+							shadow_bias;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							direction_view_space,
+							shadow_color;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+		uniform	sampler2DShadow	pssm_0, pssm_1, pssm_2, pssm_3;
+
+		uniform	mat4		pssm_0_projection_matrix,
+							pssm_1_projection_matrix,
+							pssm_2_projection_matrix,
+							pssm_3_projection_matrix;
+		uniform	float		pssm_0_slice_distance,
+							pssm_1_slice_distance,
+							pssm_2_slice_distance,
+							pssm_3_slice_distance;
+
+		#(ComputePCF)
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset - shadow_bias);
+
+			// Evaluate PCF on the shadow map corresponding to this fragment slice.
+			float	pcf = 1.0;
+
+			#(DispatchPSSM)
+
+			if	(pcf > 0.0)
+			{
+				frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+				// Normal in viewmodel space.
+				vec3	normal = norm_dpth.xyz;
+
+				// Light diffuse contribution.
+				float	idiff = max(-dot(direction_view_space, normal), 0.0);
+
+				// Light specular contribution.
+				vec4	spec_glos = texture2D(gbuffer2, UV);
+				vec3	e = reflect(normalize(frag_viewpos), normal);
+				float	ispec = pow(max(-dot(direction_view_space, normalize(e)), 0.0), spec_glos.w * 96.0);
+
+				// Full contribution.
+				vec4	diff_alpha = texture2D(gbuffer1, UV);
+				gl_FragColor = vec4(mix(shadow_color, diff_alpha.rgb * diffuse_color * idiff + spec_glos.rgb * specular_color * ispec, pcf), 1.0);
+			}
+			else	gl_FragColor = vec4(shadow_color, 0.0);
+		}
+	">
+>

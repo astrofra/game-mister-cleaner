@@ -1,0 +1,13 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+		<Uniform=<Name="gbuffer1"><Semantic="GBuffer0">>
+		<Uniform=<Name="gbuffer1"><Semantic="GBuffer1">>
+		<Uniform=<Name="gbuffer3"><Semantic="GBuffer3">>
+		<Uniform=<Name="u_ambientc"><Semantic="AmbientColor">>
+		<Uniform=<Name="u_ibs"><Semantic="InverseBufferSize">>
+	>
+	<Vertex="@core/shaders/egl2/position_no_transform_v.txt">
+	<Fragment="@core/shaders/egl2/ambient_f.txt">
+>

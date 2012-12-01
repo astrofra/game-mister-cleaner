@@ -1,0 +1,10 @@
+attribute vec3		a_position;
+uniform mat4		u_mvp;
+uniform mat4		u_mv;
+varying	vec3		forward;
+
+void	main()
+{
+	forward = (u_mv * vec4(a_position, 1.0)).xyz;
+	gl_Position = u_mvp * vec4(a_position, 1.0);
+}

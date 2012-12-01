@@ -1,0 +1,3347 @@
+<NML=1.0>
+<Scene=
+	<Items=
+		<MCamera=
+			<MItem=
+				<Id="New Camera">
+				<UId=0>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Camera=
+				<Item=
+					<Position=
+						<X=-13.007604>
+						<Y=17.432314>
+						<Z=16.491764>
+					>
+					<Rotation=
+						<X=0.507789>
+						<Y=2.251699>
+						<Z=0.000000>
+					>
+					<ItemFlag=
+						<HasTarget>
+					>
+					<Target=
+						<X=-1.047379>
+						<Y=-0.060346>
+						<Z=-4.602537>
+					>
+					<RotationOrder="YXZ">
+					<Registry=
+						<PostProcess=
+							<SSAO=
+								<Strength=1.000000>
+								<Radius=150.000000>
+								<Distance=150.000000>
+								<BlurRadius=12.000000>
+							>
+							<Bloom=
+								<Strength=2.000000>
+								<Radius=50.000000>
+								<Threshold=0.750000>
+								<Exponent=12.000000>
+								<Streak=
+									<Enabled=1.000000>
+								>
+							>
+						>
+					>
+				>
+				<ZFar=50000.000000>
+				<AspectRatioRefYAxis=True>
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_2m_03">
+				<UId=1>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****/·‘ë+**ªi/·‘ë>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-14.471929>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_2m_03.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_1m_01">
+				<UId=2>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++*****2<ê+**ªi*2<ê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-2.281738>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_1m_01.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_1m_02">
+				<UId=3>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****:(¡é+**ªi:(¡é>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-0.968720>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_1m_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_2m_01">
+				<UId=4>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****2Nªê+**ªi2Nªê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-4.004398>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_2m_01.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_1m_01">
+				<UId=5>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****žâê+**ªižâê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-5.764273>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_1m_01.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_2m_01">
+				<UId=6>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****~ùê+**ªi~ùê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-7.619059>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_2m_01.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_1m_02">
+				<UId=7>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ê?ë+**ªiê?ë>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-9.359469>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_1m_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_2m_02">
+				<UId=8>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****uÔ[ë+**ªiuÔ[ë>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-11.104075>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_2m_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_cube_broken_1m_03">
+				<UId=9>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****2xë+**ªi2xë>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.000000>
+						<Z=-12.895760>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_cube_broken_1m_03.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="ground">
+				<UId=10>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=0.068673>
+					>
+					<Scale=
+						<X=3.369876>
+						<Y=1.000000>
+						<Z=3.369876>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/indus_base_ground/indus_base_ground.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_bar_0">
+				<UId=11>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****øO¦i+**ªiøO¦i>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****;(¡é+**ªi;(¡é>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.984952>
+						<Z=-0.968720>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_bar_0.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_bar_1">
+				<UId=12>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****øO¦i+**ªiøO¦i>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++*****2<ê+**ªi*2<ê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.984952>
+						<Z=-2.281738>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_bar_1.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="post_nuke_bar_2">
+				<UId=13>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****ª’°ê+**ªiª’°ê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****øO¦i+**ªiøO¦i>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****žâê+**ªižâê>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.200256>
+						<Y=0.984952>
+						<Z=-5.764273>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuke_bar_2.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_container_big">
+				<UId=14>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000001>
+						<Y=0.000000>
+						<Z=-2.606156>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_container_big.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_container_closed">
+				<UId=15>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****x.k+**ªix.k>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000007>
+						<Y=0.000000>
+						<Z=-9.958950>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_container_closed.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_barrel">
+				<UId=16>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="Take 001">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=21>
+									<Data==426:420@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+**ªi****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++*****_j+**ªi*_j>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+**ªi**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-0.000004>
+						<Y=0.000000>
+						<Z=-6.391589>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_barrel.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_tanker">
+				<UId=17>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=0.035122>
+						<Y=0.000000>
+						<Z=3.296114>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_tanker.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_cooler">
+				<UId=18>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****:vïê+€j:vïê>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=6.595125>
+						<Y=0.000000>
+						<Z=2.581041>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_cooler.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_fence">
+				<UId=19>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==20:18@
++****=Jj£ë+€j=Jj£ë>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==20:18@
++****ˆb=@e+€jˆb=@e>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-5.939814>
+						<Y=0.000000>
+						<Z=5.712400>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_fence.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_barrier_concrete">
+				<UId=20>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****²¨Áë+€j²¨Áë>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****))€\+€j))€\>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.222623>
+						<Y=-0.000001>
+						<Z=1.892557>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_barrier_concrete.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_barrier_metal">
+				<UId=21>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****^Šâë+€j^Šâë>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****çy0]+€jçy0]>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-4.614141>
+						<Y=0.000000>
+						<Z=3.637436>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_barrier_metal.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Car">
+				<UId=24>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=23.195210>
+						<Y=0.000002>
+						<Z=-20.433382>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/car.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Car 02">
+				<UId=25>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=23.879210>
+						<Y=0.000002>
+						<Z=-15.187382>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/car_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Plant">
+				<UId=26>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=15.161209>
+						<Y=0.000002>
+						<Z=-21.492382>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/plant.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Plant 02">
+				<UId=27>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=15.679622>
+						<Y=0.000002>
+						<Z=-9.977517>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/plant_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Plant 03">
+				<UId=28>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=16.904758>
+						<Y=0.000002>
+						<Z=3.838110>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/plant_03.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Power Tower">
+				<UId=29>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=7.739209>
+						<Y=0.000002>
+						<Z=-8.076382>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/power_tower.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Power Tower 02">
+				<UId=30>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=4.672209>
+						<Y=0.000002>
+						<Z=-19.587381>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/power_tower_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Tanker">
+				<UId=31>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=23.355209>
+						<Y=0.000002>
+						<Z=-5.734842>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/tanker.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Tanker 02">
+				<UId=32>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=22.710026>
+						<Y=0.000002>
+						<Z=6.804062>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/tanker_02.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="Car 03">
+				<UId=33>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=23.408209>
+						<Y=0.000002>
+						<Z=-26.771381>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/post_nuclear/meshes/car_03.nmg">
+			>
+		>
+		<MObject=
+			<MItem=
+				<Id="nuke_barrier_concrete">
+				<UId=34>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="all">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****\[74**ªi***O\[·N÷övg\[74**ªi***O\[·N÷öög\[74**ªi***O\[·NÄÃCh
+\[74**ªi***O\[·N÷övh\[74**ªi***O\[·N**ªh\[74**ªi***O\[·NÄÃÃh\[74
+**ªi***O\[·N]]Ýh\[74**ªi***O\[·N÷ööh\[74**ªi***O\[·Nh\[74**ªi
+***O\[·N***i\[74**ªi***O\[·N÷ö6i\[74**ªi***O\[·NÄÃCi\[74**ªi***O
+\[·NPi\[74**ªi***O\[·N]]]i\[74**ªi***O\[·N**ji\[74**ªi***O\[·N
+÷övi\[74**ªi***O\[·NÄÃƒi\[74**ªi***O\[·Ni\[74**ªi***O\[·N]]i
+\[74**ªi***O\[·N**ªi\[74**ªi***O\[·N°i\[74**ªi***O\[·N÷ö¶i\[74
+**ªi***O\[·N]]½i\[74**ªi***O\[·NÄÃÃi\[74**ªi***O\[·N**Êi\[74**ªi
+***O\[·NÐi\[74**ªi***O\[·N÷öÖi\[74**ªi***O\[·N]]Ýi\[74**ªi***O
+\[·NÄÃãi\[74**ªi***O\[·N**êi\[74**ªi***O\[·Nði\[74**ªi***O\[·N
+÷ööi\[74**ªi***O\[·N]]ýi\[74**ªi***O\[·NÄÃi\[74**ªi***O\[·N**=J
+i\[74**ªi***O\[·Ni\[74**ªi***O\[·N÷öi\[74**ªi***O\[·N]]i\[7
+4**ªi***O\[·NÄÃ#i\[74**ªi***O\[·N***j\[74**ªi***O\[·N]]-j\[74**ª
+i***O\[·N0j\[74**ªi***O\[·NÄÃ3j\[74**ªi***O\[·N÷ö6j\[74**ªi***
+O\[·N**:j\[74**ªi***O\[·N]]=}j\[74**ªi***O\[·N@j\[74**ªi***O\[
+·NÄÃCj\[74**ªi***O\[·N÷öFj\[74**ªi***O\[·N**Jj\[74**ªi***O\[·N]]
+Mj\[74**ªi***O\[·NPj\[74**ªi***O\[·NÄÃSj\[74**ªi***O\[·N÷öVj\[
+74**ªi***O\[·N**Zj\[74**ªi***O\[·N]]]j\[74**ªi***O\[·N`j\[74**
+ªi***O\[·NÄÃcj\[74**ªi***O\[·N÷öfj\[74**ªi***O\[·N**jj\[74**ªi**
+*O\[·N]]mj\[74**ªi***O\[·Npj\[74**ªi***O\[·NÄÃsj\[74**ªi***O\[
+·N÷övj\[74**ªi***O\[·N**zj\[74**ªi***O\[·N]]}j\[74**ªi***O\[·N
+€j\[74**ªi***O\[·N>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****²¨Áë+€j²¨Áë>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++********+€j****>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****))€\+€j))€\>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=-7.299536>
+						<Y=-0.000001>
+						<Z=1.868222>
+					>
+					<Rotation=
+						<X=-0.000000>
+						<Y=-3.141592>
+						<Z=0.000000>
+					>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/nuke_barrier_concrete.nmg">
+			>
+		>
+		<MLight=
+			<MItem=
+				<Id="sun">
+				<UId=22>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Light=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=2.403000>
+						<Z=0.000000>
+					>
+					<Rotation=
+						<X=0.979130>
+						<Y=2.696533>
+						<Z=-0.000000>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Type="Parallel">
+				<Shadow="Map">
+				<ShadowBias=0.010000>
+				<ShadowDistribution=0.900000>
+				<VolumetricSampleStep=0.500000>
+				<VolumetricThick=1.000000>
+				<VolumetricRange=8.000000>
+				<SpecularIntensity=0.500000>
+			>
+		>
+		<MLight=
+			<MItem=
+				<Id="backlight">
+				<UId=23>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Light=
+				<Item=
+					<Position=
+						<X=0.000000>
+						<Y=2.403000>
+						<Z=0.000000>
+					>
+					<Rotation=
+						<X=0.322013>
+						<Y=-0.507891>
+						<Z=-0.000000>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Type="Parallel">
+				<ShadowBias=0.010000>
+				<ShadowDistribution=0.900000>
+				<VolumetricSampleStep=0.500000>
+				<VolumetricThick=1.000000>
+				<VolumetricRange=8.000000>
+				<Diffuse=
+					<X=0.517647>
+					<Y=0.627451>
+					<Z=0.800000>
+				>
+				<Specular=
+					<X=0.517647>
+					<Y=0.627451>
+					<Z=0.800000>
+				>
+				<DiffuseIntensity=0.500000>
+				<SpecularIntensity=0.500000>
+			>
+		>
+	>
+	<Links>
+	<Skins>
+	<Constraints>
+	<Paths>
+	<Globals=
+		<BackgroundColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<AmbientColor=
+			<X=0.400000>
+			<Y=0.400000>
+			<Z=0.400000>
+		>
+		<AmbientIntensity=1.000000>
+		<TargetExposure=0.250000>
+		<FogNear=0.000000>
+		<FogFar=0.000000>
+		<FogColor=
+			<X=1.000000>
+			<Y=1.000000>
+			<Z=1.000000>
+		>
+	>
+	<Physics=
+		<Frequency=59.999996>
+	>
+	<CurrentCamera="New Camera">
+	<ViewMatrix=
+		<R0=
+			<X=-0.869902>
+			<Y=0.000000>
+			<Z=-0.493224>
+			<W=0.000000>
+		>
+		<R1=
+			<X=0.288555>
+			<Y=0.811005>
+			<Z=-0.508927>
+			<W=0.000000>
+		>
+		<R2=
+			<X=0.400008>
+			<Y=-0.585039>
+			<Z=-0.705495>
+			<W=0.000000>
+		>
+		<R3=
+			<X=-13.007604>
+			<Y=17.432314>
+			<Z=16.491764>
+			<W=1.000000>
+		>
+	>
+>
+<Editor=
+	<View=
+		<Layout="Single">
+		<Viewport=
+			<Index=0>
+			<Camera="New Camera">
+			<Matrix=
+				<R0=
+					<X=-0.869902>
+					<Y=0.000000>
+					<Z=-0.493224>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.288555>
+					<Y=0.811005>
+					<Z=-0.508927>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.400008>
+					<Y=-0.585039>
+					<Z=-0.705495>
+					<W=0.000000>
+				>
+				<R3=
+					<X=-13.007604>
+					<Y=17.432314>
+					<Z=16.491764>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=1>
+			<Camera="@Top">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=-1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=2>
+			<Camera="@Bottom">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=-10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=3>
+			<Camera="@Left">
+			<Matrix=
+				<R0=
+					<X=-0.000000>
+					<Y=0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=-10.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+	>
+>

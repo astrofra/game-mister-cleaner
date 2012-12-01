@@ -1,0 +1,65 @@
+uniform	vec2		u_ibs;
+uniform vec3		u_fog_col;
+uniform float		u_znear, u_zfar, u_strength, u_radius, u_distance, u_fx_scale;
+uniform	sampler2D	u_depth, u_noise;
+
+float	DecodeDepth(sampler2D depth, vec2 UV)
+{
+	float	z_b = texture2D(depth, UV).x;
+	return 0.5 * (u_znear * u_zfar) / (u_zfar - z_b * (u_zfar - u_znear));
+}
+
+float	SSAO(vec2 UV, vec2 offset, float depth)
+{
+	float	in_depth = DecodeDepth(u_depth, UV + offset) + 0.2;	// Depth bias.
+	return in_depth < depth ? 0.0 : 1.0;
+}
+
+void	main()
+{
+	vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * (u_ibs * u_fx_scale);
+	float	z = DecodeDepth(u_depth, UV);
+
+	vec4	output_fragment = vec4(0.0, 0.0, 0.0, 0.0);
+
+	if	(z < u_distance)
+	{
+		// Distance scale.
+		vec2	kk = u_ibs * u_radius / max(z, 1.0);
+
+		// Dithering matrix.
+		vec4	noise = texture2D(u_noise, UV / 128.0 * (vec2(1.0, 1.0) / u_ibs));
+
+		float	a = (noise.x + noise.y + noise.z) * 16.0;
+		mat2	mat = mat2(cos(a), -sin(a), sin(a), cos(a));
+
+		float	k = (
+						SSAO(UV, (vec2(-0.5,  -0.5) * mat) * kk, z) +
+//						SSAO(UV, (vec2(-0.25, -0.5) * mat) * kk, z) +
+						SSAO(UV, (vec2( 0.25, -0.5) * mat) * kk, z) +
+//						SSAO(UV, (vec2( 0.5,  -0.5) * mat) * kk, z) +
+
+//						SSAO(UV, (vec2(-0.5,  -0.25) * mat) * kk, z) +
+						SSAO(UV, (vec2(-0.25, -0.25) * mat) * kk, z) +
+//						SSAO(UV, (vec2( 0.25, -0.25) * mat) * kk, z) +
+						SSAO(UV, (vec2( 0.5,  -0.25) * mat) * kk, z) +
+
+						SSAO(UV, (vec2(-0.5,  0.25) * mat) * kk, z) +
+//						SSAO(UV, (vec2(-0.25, 0.25) * mat) * kk, z) +
+						SSAO(UV, (vec2( 0.25, 0.25) * mat) * kk, z) +
+//						SSAO(UV, (vec2( 0.5,  0.25) * mat) * kk, z) +
+
+//						SSAO(UV, (vec2(-0.5,  0.5) * mat) * kk, z) +
+						SSAO(UV, (vec2(-0.25, 0.5) * mat) * kk, z) +
+//						SSAO(UV, (vec2( 0.25, 0.5) * mat) * kk, z) +
+						SSAO(UV, (vec2( 0.5,  0.5) * mat) * kk, z)
+					) / 8.0;
+
+		// Blend to no AO on the last 25% of distance.
+		float	fade = 1.0 - max((z - u_distance * 0.75) / (u_distance * 0.25), 0.0);
+		k = mix(1.0, k, u_strength * fade);
+		output_fragment = vec4(0.0, 0.0, 0.0, 1.0 - k);
+	}
+
+	gl_FragColor = output_fragment;
+}

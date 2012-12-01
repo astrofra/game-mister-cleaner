@@ -1,0 +1,16 @@
+<NML = 1.0>
+
+<GLSL_Deferred =
+	/*
+		Lightning is done in view space.
+	*/
+	#include("shaders/deferred_light.nml")
+	#include("shaders/deferred_pointlight.nml")
+	#include("shaders/deferred_linearlight.nml")
+	#include("shaders/deferred_spotlight.nml")
+	#include("shaders/deferred_probelight.nml")
+	#include("shaders/deferred_volumetric.nml")
+
+	// Post-processing shaders.
+	#include("shaders/deferred_post_process.nml")
+>

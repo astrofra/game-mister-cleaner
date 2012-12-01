@@ -1,0 +1,4 @@
+<NML=1.0>
+<ViewMode="Project">
+<Input="project.ngp">
+<IgnoreEsc=True><IgnoreMissingResource=True>

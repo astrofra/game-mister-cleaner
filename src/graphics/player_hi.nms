@@ -1,0 +1,318 @@
+<NML=1.0>
+<Scene=
+	<Items=
+		<MObject=
+			<MItem=
+				<Id="player_hi">
+				<UId=0>
+				<Active>
+				<Priority=0.500000>
+				<ScriptLogicFq=15.000000>
+				<MotionPlayer=
+					<Motions=
+						<Motion=
+							<Id="player">
+							<UseQuaternion=True>
+							<QChannel=
+								<BinaryKeys=
+									<Count=68>
+									<Data==1383:1360@
+****2×qN._i._i2×qN÷övg2×qN._i._i2×qN÷öög2×qN._i._i2×qNÄÃCh
+2×qN._i._i2×qN÷övh2×qN._i._i2×qN**ªh2×qN._i._i2×qNÄÃÃh2×qN
+._i._i2×qN]]Ýh2×qN._i._i2×qN÷ööh2×qN._i._i2×qNh2×qN._i
+._i2×qN***i2×qN._i._i2×qN÷ö6i2×qN._i._i2×qNÄÃCi2×qN._i._i
+2×qNPi2×qN._i._i2×qN]]]i2×qN._i._i2×qN**ji2×qN._i._i2×qN
+÷övi2×qN._i._i2×qNÄÃƒi2×qN._i._i2×qNi2×qN._i._i2×qN]]i
+2×qN._i._i2×qN**ªi2×qN._i._i2×qN°i2×qN._i._i2×qN÷ö¶i2×qN
+._i._i2×qN]]½i2×qN._i._i2×qNÄÃÃi2×qN._i._i2×qN**Êi2×qN._i
+._i2×qNÐi2×qN._i._i2×qN÷öÖi2×qN._i._i2×qN]]Ýi2×qN._i._i
+2×qNÄÃãi2×qN._i._i2×qN**êi2×qN._i._i2×qNði2×qN._i._i2×qN
+÷ööi2×qN._i._i2×qN]]ýi2×qN._i._i2×qNÄÃi2×qN._i._i2×qN**=J
+i2×qN._i._i2×qNi2×qN._i._i2×qN÷öi2×qN._i._i2×qN]]i2×q
+N._i._i2×qNÄÃ#i2×qN._i._i2×qN***j2×qN._i._i2×qN]]-j2×qN._
+i._i2×qN0j2×qN._i._i2×qNÄÃ3j2×qN._i._i2×qN÷ö6j2×qN._i._
+i2×qN**:j2×qN._i._i2×qN]]=}j2×qN._i._i2×qN@j2×qN._i._i2×
+qNÄÃCj2×qN._i._i2×qN÷öFj2×qN._i._i2×qN**Jj2×qN._i._i2×qN]]
+Mj2×qN._i._i2×qNPj2×qN._i._i2×qNÄÃSj2×qN._i._i2×qN÷öVj2×
+qN._i._i2×qN**Zj2×qN._i._i2×qN]]]j2×qN._i._i2×qN`j2×qN.
+_i._i2×qNÄÃcj2×qN._i._i2×qN÷öfj2×qN._i._i2×qN**jj2×qN._i.
+_i2×qN]]mj2×qN._i._i2×qNpj2×qN._i._i2×qNÄÃsj2×qN._i._i2×
+qN÷övj2×qN._i._i2×qN**zj2×qN._i._i2×qN]]}j2×qN._i._i2×qN
+€j2×qN._i._i2×qN>
+								>
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****jjòj+€jjjòj>
+									>
+								>
+								<Id="PositionX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****¾™%h+€j¾™%h>
+									>
+								>
+								<Id="PositionY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++****[ãe+€j[ãe>
+									>
+								>
+								<Id="PositionZ">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleX">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleY">
+							>
+							<Channel=
+								<Curve=
+									<BinaryKnot=
+										<Count=2>
+										<Data==18:18@
++******ªi+€j**ªi>
+									>
+								>
+								<Id="ScaleZ">
+							>
+						>
+					>
+				>
+				<PhysicItem=
+					<SelfMask=1>
+					<Mask=1>
+					<LinearDamping_v2=1.000000>
+					<AngularDamping_v2=1.000000>
+					<Mode="None">
+				>
+			>
+			<Object=
+				<Item=
+					<Position=
+						<X=6.257843>
+						<Y=0.491086>
+						<Z=0.005673>
+					>
+					<Rotation=
+						<X=-1.570796>
+						<Y=3.141593>
+						<Z=0.000000>
+					>
+					<ItemFlag>
+					<Target=
+						<X=0.000000>
+						<Y=0.000000>
+						<Z=1.000000>
+					>
+					<RotationOrder="YXZ">
+					<Registry>
+				>
+				<Geometry="graphics/player_hi.nmg">
+			>
+		>
+	>
+	<Links>
+	<Skins>
+	<Constraints>
+	<Globals=
+		<BackgroundColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<AmbientColor=
+			<X=0.000000>
+			<Y=0.000000>
+			<Z=0.000000>
+		>
+		<AmbientIntensity=1.000000>
+		<TargetExposure=0.250000>
+		<FogNear=0.000000>
+		<FogFar=0.000000>
+		<FogColor=
+			<X=1.000000>
+			<Y=1.000000>
+			<Z=1.000000>
+		>
+	>
+	<Physics=
+		<Frequency=59.999996>
+	>
+	<ViewMatrix=
+		<R0=
+			<X=0.672055>
+			<Y=0.000000>
+			<Z=0.740501>
+			<W=0.000000>
+		>
+		<R1=
+			<X=-0.296280>
+			<Y=0.916468>
+			<Z=0.268894>
+			<W=0.000000>
+		>
+		<R2=
+			<X=-0.678646>
+			<Y=-0.400107>
+			<Z=0.615917>
+			<W=0.000000>
+		>
+		<R3=
+			<X=11.098036>
+			<Y=3.344702>
+			<Z=-4.387130>
+			<W=1.000000>
+		>
+	>
+>
+<Editor=
+	<View=
+		<Layout="Single">
+		<Viewport=
+			<Index=0>
+			<Camera="@Perspective">
+			<Matrix=
+				<R0=
+					<X=0.672055>
+					<Y=0.000000>
+					<Z=0.740501>
+					<W=0.000000>
+				>
+				<R1=
+					<X=-0.296280>
+					<Y=0.916468>
+					<Z=0.268894>
+					<W=0.000000>
+				>
+				<R2=
+					<X=-0.678646>
+					<Y=-0.400107>
+					<Z=0.615917>
+					<W=0.000000>
+				>
+				<R3=
+					<X=11.098036>
+					<Y=3.344702>
+					<Z=-4.387130>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=1>
+			<Camera="@Top">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=-1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=2>
+			<Camera="@Bottom">
+			<Matrix=
+				<R0=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=-0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=0.000000>
+					<Y=-10.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+		<Viewport=
+			<Index=3>
+			<Camera="@Left">
+			<Matrix=
+				<R0=
+					<X=-0.000000>
+					<Y=0.000000>
+					<Z=-1.000000>
+					<W=0.000000>
+				>
+				<R1=
+					<X=0.000000>
+					<Y=1.000000>
+					<Z=0.000000>
+					<W=0.000000>
+				>
+				<R2=
+					<X=1.000000>
+					<Y=0.000000>
+					<Z=-0.000000>
+					<W=0.000000>
+				>
+				<R3=
+					<X=-10.000000>
+					<Y=0.000000>
+					<Z=0.000000>
+					<W=1.000000>
+				>
+			>
+		>
+	>
+>

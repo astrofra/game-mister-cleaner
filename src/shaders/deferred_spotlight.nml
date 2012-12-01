@@ -1,0 +1,413 @@
+<NML = 1.0>
+
+<ProjectiveSpotlight =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset;
+
+		uniform mat4		light_projection_matrix;
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space,
+							direction_view_space;
+
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+		uniform	sampler2D	projection_texture;
+
+		#(UnpackNormalDepth)
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			vec3	dt = frag_viewpos - position_view_space;
+			float	dl = length(dt);
+			dt = dt / dl;
+			float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+			float	idiff = sqrt(max(-dot(dt, normal), 0.0)) * atten;
+
+			// Projective map.
+			vec4	pj_coord = light_projection_matrix * vec4(frag_viewpos, 1.0);
+			if	(pj_coord.w < 0.5)
+				discard;
+			vec2	pj_biased = ((pj_coord.xy / pj_coord.w) + 1.0) * 0.5;
+
+			// Clamp when outside of cone.
+			float	sdiff = step(spot_cone_angle - spot_edge_angle, dot(direction_view_space, dt));
+
+			// Full contribution.
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			gl_FragColor = vec4(texture2D(projection_texture, pj_biased).rgb * diff_alpha.rgb * diffuse_color * idiff * sdiff, 1.0);
+		}
+	">
+>
+
+<ProjectiveSpotlightShadow =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset;
+
+		uniform mat4		light_projection_matrix;
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space;
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+		uniform	sampler2D	projection_texture;
+
+		#(UnpackNormalDepth)
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			vec3	dt = frag_viewpos - position_view_space;
+			float	dl = length(dt);
+			dt = dt / dl;
+			float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+			float	ishadow = pow(max(-dot(dt, normal), 0.0) * atten, 0.25);
+
+			// Projective map.
+			vec4	pj_coord = light_projection_matrix * vec4(frag_viewpos, 1.0);
+			vec3	pj_biased = ((pj_coord.xyz / pj_coord.q) + 1.0) * 0.5;
+
+			// Full contribution.
+			gl_FragColor = texture2D(projection_texture, pj_biased.xy).rgba * ishadow;
+		}
+	">
+>
+
+<Spotlight =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space,
+							direction_view_space;
+
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+
+		#(UnpackNormalDepth)
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			vec3	dt = frag_viewpos - position_view_space;
+			float	dl = length(dt);
+			dt = dt / dl;
+			float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+			float	idiff = max(-dot(dt, normal) * atten, 0.0);
+
+			float	sdiff = dot(direction_view_space, dt);
+			if	(sdiff < spot_cone_angle)
+			{
+				if	(sdiff < 0.0)
+					sdiff = 0.0;
+				else
+					sdiff = max((sdiff - spot_edge_angle) / (spot_cone_angle - spot_edge_angle), 0.0);
+			}
+			else	sdiff = 1.0;
+
+			// Full contribution.
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			gl_FragColor = vec4(diff_alpha.rgb * diffuse_color * idiff * sdiff, 1.0);
+		}
+	">
+>
+
+<SpotlightShadowMap =
+	<Vertex = "
+		varying	vec3		forward;
+
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							shadow_bias;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space,
+							direction_view_space,
+							shadow_color;
+
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle,
+							inverse_shadowmap_size;
+
+		uniform	sampler2DShadow 	light_view_depth_texture;
+		uniform	sampler2D			noise_texture;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+
+		uniform	mat4		view_to_light_matrix;
+		uniform	mat4		light_projection_matrix;
+
+		#(ComputePCF)
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset - shadow_bias);
+
+			float	pcf = ComputePCF(frag_viewpos, light_projection_matrix, light_view_depth_texture, 1.5);
+			
+			if	(pcf > 0.0)
+			{
+				// Normal in viewmodel space.
+				vec3	normal = norm_dpth.xyz;
+
+				// Light diffuse contribution.
+				vec3	dt = frag_viewpos - position_view_space;
+				float	dl = length(dt);
+				dt = dt / dl;
+				float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+				float	idiff = max(-dot(dt, normal) * atten, 0.0);
+
+				float	sdiff = dot(direction_view_space, dt);
+				if	(sdiff < spot_cone_angle)
+				{
+					if	(sdiff < 0.0)
+						sdiff = 0.0;
+					else
+						sdiff = max((sdiff - spot_edge_angle) / (spot_cone_angle - spot_edge_angle), 0.0);
+				}
+				else	sdiff = 1.0;
+
+				// Light specular contribution.
+				vec4	spec_glos = texture2D(gbuffer2, UV);
+				vec3	e = reflect(normalize(frag_viewpos), normal);
+
+				float	ispec = pow(max(-dot(dt, normalize(e)), 0.0), spec_glos.w * 96.0) * atten * sdiff;
+
+				// Full contribution.
+				vec4	diff_alpha = texture2D(gbuffer1, UV);
+				gl_FragColor = vec4(mix(shadow_color, diff_alpha.rgb * diffuse_color * idiff * sdiff + spec_glos.rgb * specular_color * ispec, pcf), 1.0);
+			}
+			else	gl_FragColor = vec4(shadow_color, 1.0);
+		}
+	">
+>
+
+<ProjectiveSpotlightShadowMap =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							shadow_bias;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space,
+							direction_view_space,
+							shadow_color;
+
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle,
+							inverse_shadowmap_size;
+
+		uniform	sampler2DShadow 	light_view_depth_texture;
+		uniform	sampler2D	noise_texture,
+							projection_texture;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+
+		uniform	mat4		view_to_light_matrix,
+							light_projection_matrix;
+
+		#(ComputePCF)
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+
+			// Unpack depth and compute fragment position in view space.
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset - shadow_bias);
+			float	pcf = ComputePCF(frag_viewpos, light_projection_matrix, light_view_depth_texture, 1.5);
+
+			if	(pcf > 0.0)
+			{
+				// Normal in viewmodel space.
+				vec3	normal = norm_dpth.xyz;
+
+				// Light diffuse contribution.
+				vec3	dt = frag_viewpos - position_view_space;
+				float	dl = length(dt);
+				dt = dt / dl;
+				float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+				float	idiff = sqrt(max(-dot(dt, normal), 0.0)) * atten;
+
+				// Clamp when outside of cone.
+				float	sdiff = dot(direction_view_space, dt) < (spot_cone_angle - spot_edge_angle) ? 0.0 : 1.0;
+
+				// Full contribution.
+				vec4	flp = light_projection_matrix * vec4(frag_viewpos, 1.0);
+				vec3	pjb = ((flp.xyz / flp.w) + 1.0) * 0.5;
+
+				vec4	diff_alpha = texture2D(gbuffer1, UV);
+				gl_FragColor = vec4(mix(shadow_color, texture2D(projection_texture, pjb.xy).rgb * diff_alpha.rgb * diffuse_color * idiff * sdiff, pcf), 1.0);
+			}
+			else	gl_FragColor = vec4(shadow_color, 1.0);
+		}
+	">
+>
+
+<SpotlightSpecular =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset;
+
+		uniform vec3		diffuse_color,
+							specular_color,
+							position_view_space,
+							direction_view_space;
+
+		uniform	float		range,
+							spot_edge_angle,
+							spot_cone_angle;
+
+		uniform	sampler2D	gbuffer0, gbuffer1, gbuffer2;
+
+		#(UnpackNormalDepth)
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+
+			// Fragment to view space.
+ 			vec3	fragment_position = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Normal in viewmodel space.
+			vec3	normal = norm_dpth.xyz;
+
+			// Light diffuse contribution.
+			vec3	dt = fragment_position - position_view_space;
+			float	dl = length(dt);
+			dt = dt / dl;
+			float	atten = range > 0.0 ? max(1.0 - dl / range, 0.0) : 1.0;
+			float	idiff = max(-dot(dt, normal) * atten, 0.0);
+
+			float	sdiff = dot(direction_view_space, dt);
+			if	(sdiff < spot_cone_angle)
+					sdiff = sdiff < 0.0 ? 0.0 : max((sdiff - spot_edge_angle) / (spot_cone_angle - spot_edge_angle), 0.0);
+			else	sdiff = 1.0;
+
+			// Light specular contribution.
+			vec4	spec_glos = texture2D(gbuffer2, UV);
+			vec3	e = reflect(normalize(fragment_position), normal);
+			float	ispec = pow(max(-dot(dt, normalize(e)), 0.0), spec_glos.w * 96.0) * atten * sdiff;
+
+			// Full contribution.
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			gl_FragColor = vec4(diff_alpha.rgb * diffuse_color * idiff * sdiff + spec_glos.rgb * specular_color * ispec, 1.0);
+		}
+	">
+>

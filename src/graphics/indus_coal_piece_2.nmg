@@ -1,0 +1,55 @@
+<NML=1.0>
+<Geometry=
+	<RenderWord>
+	<Vertex=
+		<Count=12>
+		<Data==153:144@
+=JRçêÖ=}gÇ=}gJ1­çŠ¼dfR	gç*9If>«Ëgšhæ=Jf4g*à g"°8g*²4å*°äËg
+=J¶¿çBë*çê¿fª¯f*!he=JËçÊ·¿gòu5g*²æj=JºgºÍæZwf*Z¹c<«ËçZÀfª
+)áæ2ÚŸçjpçÚJ¬gimçâå^ç>
+	>
+	<Polygon=
+		<Count=20>
+		<BindingCount=60>
+		<Data==406:400@
+-***,***+***********-***-***,***********-***.***-***********-***
+/***.***********-***+***/***********-***0***4***+*******-***1***
+0***,*******-***2***1***-*******-***3***2***.*******-***4***3***
+/*******-***+***,***0*******-***,***-***1*******-***-***.***2***
+****-***.***/***3*******-***/***+***4*******-***0***1***5*******
+-***1***2***5*******-***2***3***5*******-***3***4***5*******-***
+4***0***5*******>
+	>
+	<VNormal=
+		<Count=60>
+		<Data==185:180@
+Õˆ&Õˆ&Õˆ&šXšXšX{ˆ{ˆ{ˆÕ:†Õ:†Õ:†·\;·\;·\;ø¹ø¹ø¹hhÏhhÏhhÏ’
+Qe’Qe’QeYëŒYëŒYëŒæÀ$æÀ$æÀ$kÄkÄkÄs‘,s‘,s‘,wB‹wB‹wB‹ôêˆôêˆôêˆÆñ
+÷Æñ÷Æñ÷~?Î~?Î~?Î¨!¨!¨!tÆ?tÆ?tÆ?=}²=}²=}²8í¼8í¼8í¼>
+	>
+	<VTangent=
+		<Count=60>
+		<Data==377:360@
+†Ö?†~†Ö?†~†Ö?†~UKœU¸	UKœU¸	UKœU¸	ô‡lôèÍô‡lôèÍô‡lôèÍÏPÜÏxÏPÜÏ
+xÏPÜÏx8åÁ8“o8åÁ8“o8åÁ8“ocÅùc[cÅùc[cÅùc[|=@€|ÔT|=@€|ÔT|=@€|Ô
+T't'àÄ't'àÄ't'àÄÄu*Ä*ßÄu*Ä*ßÄu*Ä*ß=M´ G=M´ G=M´ G†Ö?†~
+†Ö?†~†Ö?†~UKœU¸	UKœU¸	UKœU¸	ô‡lôèÍô‡lôèÍô‡lôèÍÏPÜÏxÏPÜÏxÏPÜÏ
+x8åÁ8“o8åÁ8“o8åÁ8“o|=@€|ÔT|=@€|ÔT|=@€|ÔT't'àÄ't'àÄ't'àÄÄu*Ä*
+ßÄu*Ä*ßÄu*Ä*ß=M´ G=M´ G=M´ GcÅùc[cÅùc[cÅùc[>
+	>
+	<UV=
+		<Count=1>
+		<Data==487:480@
+]]]i™Þh***i™ÞhÄÃCi****‘i™Þh]]]i™Þh÷övi****üöög™Þhòööç™Þh
+**J]****ÄÃÃh™Þhüöög™Þhøövh*******i™ÞhÄÃÃh™Þh÷ööh****ÄÃCi4òOi
+ùööh4òOi***i™Þh÷övi4òOiÄÃCi4òOi]]]i™Þh­#L]4òOiöövè4òOiòööç™Þh
+÷övh4òOi­#L]4òOiüöög™Þhùööh4òOi÷övh4òOiÄÃÃh™Þh***i™Þh]]]i™Þh
+ÄÃCi4òOi]]]i™Þh‘i™Þh÷övi4òOiòööç™Þhüöög™Þh­#L]4òOiüöög™Þh
+ÄÃÃh™Þh÷övh4òOiÄÃÃh™Þh***i™Þhùööh4òOiÄÃCi4òOi÷övi4òOi^]]i**ªi
+öövè4òOi­#L]4òOióööç**ªi­#L]4òOi÷övh4òOiúöög**ªi÷övh4òOiùööh4òOi
+ÅÃÃh**ªiùööh4òOiÄÃCi4òOi+**i**ªi>
+	>
+	<Materials=
+		<MaterialRef="graphics/indus_coal_piece.nmm">
+	>
+>

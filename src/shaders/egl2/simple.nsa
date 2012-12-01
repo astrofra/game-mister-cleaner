@@ -1,0 +1,9 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+		<Uniform=<Name="u_mvp"><Semantic="ModelViewProjectionMatrix">>
+	>
+	<Vertex="@core/shaders/egl2/simple_v.txt">
+	<Fragment="@core/shaders/egl2/simple_f.txt">
+>

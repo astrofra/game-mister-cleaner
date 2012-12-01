@@ -1,0 +1,26 @@
+uniform	sampler2D	u_source;
+uniform	float		u_pass, u_attenuation;
+uniform float		u_fx_scale;
+uniform	vec2		u_ibs, u_blur_d;
+
+void	main()
+{
+	vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * (u_ibs * u_fx_scale);
+	float	b = pow(4.0, u_pass);
+
+	vec4	ref = texture2D(u_source, UV);
+
+	vec3	color = ref.rgb;
+	float	k = 1.0;
+
+	for	(float s = 1.0; s < 4.0; s++)
+	{
+		float	w = clamp(pow(u_attenuation, b * s), 0.0, 1.0);
+		vec2	dt_UV = u_blur_d * u_ibs * b * s;
+
+		color += w * texture2D(u_source, UV - dt_UV).rgb;
+		color += w * texture2D(u_source, UV + dt_UV).rgb;
+		k += w + w;
+	}
+	gl_FragColor = vec4(color / k, ref.a);
+}

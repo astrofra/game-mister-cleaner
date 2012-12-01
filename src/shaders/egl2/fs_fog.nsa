@@ -1,0 +1,18 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+
+		<Uniform=<Name="u_depth"><Semantic="DepthBuffer">>
+		<Uniform=<Name="u_ibs"><Semantic="InverseBufferSize">>
+
+		<Uniform=<Name="u_znear"><Semantic="ZNear">>
+		<Uniform=<Name="u_zfar"><Semantic="ZFar">>
+
+		<Uniform=<Name="u_fog_col"><Semantic="FogColor">>
+		<Uniform=<Name="u_fog_near"><Semantic="FogNear">>
+		<Uniform=<Name="u_fog_irange"><Semantic="FogInverseRange">>
+	>
+	<Vertex="@core/shaders/egl2/position_no_transform_v.txt">
+	<Fragment="@core/shaders/egl2/fs_fog_f.txt">
+>

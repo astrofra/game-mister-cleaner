@@ -1,4 +1,0 @@
-Move();
-TurnLeft();
-Move();
-TurnLeft();

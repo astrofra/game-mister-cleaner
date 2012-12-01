@@ -1,0 +1,21 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+
+		<Uniform=<Name="u_depth"><Semantic="DepthBuffer">>
+		<Uniform=<Name="u_ibs"><Semantic="InverseBufferSize">>
+		<Uniform=<Name="u_fx_scale"><Semantic="FxScale">>
+
+		<Uniform=<Name="u_znear"><Semantic="ZNear">>
+		<Uniform=<Name="u_zfar"><Semantic="ZFar">>
+
+		<Uniform=<Name="u_noise"><Semantic="NoiseMap">>
+
+		<Uniform=<Name="u_strength"><Semantic="User">>
+		<Uniform=<Name="u_radius"><Semantic="User">>
+		<Uniform=<Name="u_distance"><Semantic="User">>
+	>
+	<Vertex="@core/shaders/egl2/position_no_transform_v.txt">
+	<Fragment="@core/shaders/egl2/ssao_f.txt">
+>

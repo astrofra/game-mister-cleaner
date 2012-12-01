@@ -1,0 +1,10 @@
+<NML=1.0>
+<Shader=
+	<Input=
+		<Attribute=<Name="a_position"><Semantic="Position">>
+		<Attribute=<Name="a_color"><Semantic="VertexColor">>
+		<Uniform=<Name="u_mvp"><Semantic="ModelViewProjectionMatrix">>
+	>
+	<Vertex="@core/shaders/egl2/single_color_v.txt">
+	<Fragment="@core/shaders/egl2/single_color_f.txt">
+>

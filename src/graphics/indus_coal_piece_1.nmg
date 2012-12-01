@@ -1,0 +1,62 @@
+<NML=1.0>
+<Geometry=
+	<RenderWord=
+		<Lit>
+	>
+	<Vertex=
+		<Count=12>
+		<Data==149:144@
+=JÐIçbæ9g*9çê_7g¾ëfJ>‹çÊ¦*g}Î®g*=@bÊšIçìáTg’_.gzt¶ç8¨tæ*Fãj
+Çæ°‚æú-ºçút¶g2PiæŠ+Tfj…÷fú¢*fº-ºgJ¦<çKc'æ(kg*ú¿æ€Î®çª1æÊéfg ¨
+ŽçªQ=}çêÁáfö³¢çâCTg>
+	>
+	<Polygon=
+		<Count=20>
+		<BindingCount=60>
+		<Data==406:400@
+-***,***+***********-***-***,***********-***.***-***********-***
+/***.***********-***+***/***********-***0***4***+*******-***1***
+0***,*******-***2***1***-*******-***3***2***.*******-***4***3***
+/*******-***+***,***0*******-***,***-***1*******-***-***.***2***
+****-***.***/***3*******-***/***+***4*******-***0***1***5*******
+-***1***2***5*******-***2***3***5*******-***3***4***5*******-***
+4***0***5*******>
+	>
+	<PNormal=
+		<Count=20>
+		<Data==60:60@
+&Þþ ½i$Ä3à`º›,ñŽa`ó>šÓÒC½ìš\.ŒzÄ4tÑÜÿ^¸†xúžùÀ[:­(ŒÞC>
+	>
+	<VNormal=
+		<Count=60>
+		<Data==182:180@
+&Þ&Þ&Þþ þ þ ½i$½i$½i$Ä3àÄ3àÄ3à`º`º`º›,ñ›,ñ›,ñŽa`Ža`Ža`ó
+>šó>šó>šÓÒCÓÒCÓÒC½ì½ì½ìš\š\š\.Œz.Œz.ŒzÄ4tÄ4tÄ4tÑÜÿÑÜÿÑÜÿ^
+¸^¸^¸†x†x†xúžúžúžùÀ[ùÀ[ùÀ[:­(:­(:­(ŒÞCŒÞCŒÞC>
+	>
+	<VTangent=
+		<Count=60>
+		<Data==371:360@
+Ücz[gZq‡Ÿu¨52µý.§ë—ŽUi¾`YFœô»ðËeì½#¨øÍåñ”rVÌ=}´^ÙØ
+õÉgqÅ®9S˜WŸ=M¦<4¹òŒx=}w×óUxƒNÇoP…yTÒzP„yTÒzè8•R¹RßY…=}ÂoäGI
+¼`ÓÓsÑ]¿õÿR¹RÎÙmË\[àÐwö0²…ÙJHî¿€çi§*<ë–ŽHävó~—@ïhï‡$vdÒo%u
+dÑn&s‘dÐlÆügwévµPXß„¶S\àƒõÉí^Ù|îÔãVÎtíÖâUÌrwÍWÎtnÂdÉbu	ÊZÍp
+lM`ÀT|‡@z×\ŒsJfÄV=@{ßÐYÔÿ{-¹òàCþ³(¬(2µûöÂùœõ!ÄësÈ=J¶œó$på
+Ú‡'Aí¾œ	U{6Ê‰4|¥9E%¦ 9S-¡t;*¥4]ÛÓWU}çñ„>
+	>
+	<UV=
+		<Count=1>
+		<Data==487:480@
+]]]i™Þh***i™ÞhÄÃCi****‘i™Þh]]]i™Þh÷övi****üöög™Þhòööç™Þh
+**J]****ÄÃÃh™Þhüöög™Þhøövh*******i™ÞhÄÃÃh™Þh÷ööh****ÄÃCi4òOi
+ùööh4òOi***i™Þh÷övi4òOiÄÃCi4òOi]]]i™Þh­#L]4òOiöövè4òOiòööç™Þh
+÷övh4òOi­#L]4òOiüöög™Þhùööh4òOi÷övh4òOiÄÃÃh™Þh***i™Þh]]]i™Þh
+ÄÃCi4òOi]]]i™Þh‘i™Þh÷övi4òOiòööç™Þhüöög™Þh­#L]4òOiüöög™Þh
+ÄÃÃh™Þh÷övh4òOiÄÃÃh™Þh***i™Þhùööh4òOiÄÃCi4òOi÷övi4òOi^]]i**ªi
+öövè4òOi­#L]4òOióööç**ªi­#L]4òOi÷övh4òOiúöög**ªi÷övh4òOiùööh4òOi
+ÅÃÃh**ªiùööh4òOiÄÃCi4òOi+**i**ªi>
+	>
+	<Materials=
+		<MaterialRef="graphics/indus_coal_piece.nmm">
+	>
+>

@@ -1,0 +1,487 @@
+<NML = 1.0>
+
+<VolumetricFogPSSM =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+
+		uniform	float		inverse_shadowmap_size,
+							shadow_bias,
+							framebuffer_fx_scaler,
+							view_depth_offset,
+							volumetric_range,
+							volumetric_step,
+							volumetric_thickness;
+
+		uniform vec3		volumetric_color,
+							position_view_space;
+							
+		uniform	sampler2D	gbuffer0;
+		uniform	sampler2DShadow	pssm_0, pssm_1, pssm_2, pssm_3;
+
+		uniform	mat4		pssm_0_projection_matrix,
+							pssm_1_projection_matrix,
+							pssm_2_projection_matrix,
+							pssm_3_projection_matrix;
+		uniform	float		pssm_0_slice_distance,
+							pssm_1_slice_distance,
+							pssm_2_slice_distance,
+							pssm_3_slice_distance;
+
+		//--------------------------------------------------------------------
+		float	EvaluatePCF(sampler2DShadow pssm, vec3 fvp, mat4 pjm, float k)
+		{
+			vec4	flp = pjm * vec4(fvp, 1.0);
+			vec3	pjb = ((flp.xyz / flp.w) + 1.0) * 0.5;
+			return shadow2D(pssm, pjb).r;
+		}
+
+		float	DispatchEvaluatePCF(vec3 frag_viewpos)
+		{
+			// Evaluate PCF on the shadow map corresponding to this fragment slice.
+			float	pcf = 1.0;
+
+					if	(frag_viewpos.z < pssm_0_slice_distance)
+				pcf = EvaluatePCF(pssm_0, frag_viewpos, pssm_0_projection_matrix, 1.0);
+			else	if	(frag_viewpos.z < pssm_1_slice_distance)
+				pcf = EvaluatePCF(pssm_1, frag_viewpos, pssm_1_projection_matrix, pssm_0_slice_distance / (pssm_1_slice_distance - pssm_0_slice_distance));
+			else	if	(frag_viewpos.z < pssm_2_slice_distance)
+				pcf = EvaluatePCF(pssm_2, frag_viewpos, pssm_2_projection_matrix, pssm_0_slice_distance / (pssm_2_slice_distance - pssm_1_slice_distance));
+			else	if	(frag_viewpos.z < pssm_3_slice_distance)
+				pcf = EvaluatePCF(pssm_3, frag_viewpos, pssm_3_projection_matrix, pssm_0_slice_distance / (pssm_3_slice_distance - pssm_2_slice_distance));
+
+			return pcf;
+		}
+
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			if	(norm_dpth.z == 0.0)
+				discard;
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset - shadow_bias);
+
+			// Compute ray entry and exit points.
+			vec3	direction_ray = normalize(frag_viewpos);
+
+			// Evaluate dust on light path.
+			vec3	dust_sp = direction_ray * volumetric_range * 0.1,
+					dust_dt = direction_ray * volumetric_step;
+
+			float	total_contribution = 0.0,
+					contribution = volumetric_step / volumetric_range;
+			float	d_squared = min(norm_dpth.w * norm_dpth.w, volumetric_range * volumetric_range * 0.9 * 0.9);
+
+			float	max_step = 0.0;
+			while	(dot(dust_sp, dust_sp) < d_squared)
+			{
+				total_contribution += contribution * DispatchEvaluatePCF(dust_sp);
+				dust_sp += dust_dt;
+//dust_dt *= 1.1;
+				max_step += 1.0;
+				if	(max_step > 500.0)
+					break;
+			}
+
+			gl_FragColor = vec4(volumetric_color, total_contribution * volumetric_thickness);
+		}
+	">
+>
+
+<VolumetricSphere =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							framebuffer_fx_scaler;
+
+		uniform vec3		volumetric_color,
+							position_view_space;
+
+		uniform	float		volumetric_range,
+							volumetric_thickness;
+
+		uniform	sampler2D	gbuffer0;
+
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Compute ray entry and exit points.
+			vec3	d_ray = normalize(frag_viewpos),
+					dst = -position_view_space;
+
+			float	B = dot(dst, d_ray),
+					C = dot(dst, dst) - volumetric_range * volumetric_range,
+					D = B * B - C;
+
+			if	(D <= 0.0)
+				discard;
+
+			// Sample volume.
+			float	fT0 = -B - sqrt(D),
+					fT1 = -B + sqrt(D);
+			if	(fT1 < 0.0)
+				discard;
+
+			fT0 = max(fT0, 0.0);
+			fT1 = min(length(frag_viewpos), fT1);
+
+			float   thickness = clamp((fT1 - fT0) / (volumetric_range * 2.0), 0.0, 1.0);
+			gl_FragColor = vec4(volumetric_color, thickness * thickness * volumetric_thickness);
+		}
+	">
+>
+
+<VolumetricSphereShadowMap =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							framebuffer_fx_scaler;
+
+		uniform vec3		volumetric_color,
+							position_view_space;
+
+		uniform	float		volumetric_range,
+							volumetric_thickness,
+							volumetric_step;
+
+		uniform	sampler2D	gbuffer0;
+		uniform	sampler2DShadow	psm_0, psm_1, psm_2, psm_3, psm_4, psm_5;
+
+		uniform float		inverse_shadowmap_size, shadow_bias;
+
+		uniform	mat4		psm_0_projection_matrix,
+							psm_1_projection_matrix,
+							psm_2_projection_matrix,
+							psm_3_projection_matrix,
+							psm_4_projection_matrix,
+							psm_5_projection_matrix;
+
+		uniform	mat4		view_to_light_matrix;
+
+		float	ComputePCF(vec3 fvp, mat4 pjm, sampler2DShadow sampler)
+		{
+			vec4	flp = pjm * vec4(fvp, 1.0);
+			vec3	pjb = ((flp.xyz / flp.w) + 1.0) * 0.5;
+			return shadow2D(sampler, pjb).r;
+		}
+
+		float	EvaluatePCF(vec3 frag_viewpos)
+		{
+			vec3	dn = normalize((view_to_light_matrix * vec4(frag_viewpos, 1.0)).xyz);
+			float	pcf = 1.0;
+
+					if	((dn.z > 0.0) && (dn.x > -dn.z) && (dn.x < dn.z) && (dn.y > -dn.z) && (dn.y < dn.z))
+					pcf = ComputePCF(frag_viewpos, psm_0_projection_matrix, psm_0);
+			else	if	((dn.z < 0.0) && (dn.x > dn.z) && (dn.x < -dn.z) && (dn.y > dn.z) && (dn.y < -dn.z))
+					pcf = ComputePCF(frag_viewpos, psm_2_projection_matrix, psm_2);
+
+			else	if	((dn.x > 0.0) && (dn.y > -dn.x) && (dn.y < dn.x) && (dn.z > -dn.x) && (dn.z < dn.x))
+					pcf = ComputePCF(frag_viewpos, psm_1_projection_matrix, psm_1);
+			else	if	((dn.x < 0.0) && (dn.y > dn.x) && (dn.y < -dn.x) && (dn.z > dn.x) && (dn.z < -dn.x))
+					pcf = ComputePCF(frag_viewpos, psm_3_projection_matrix, psm_3);
+
+			else	if	((dn.y > 0.0) && (dn.x > -dn.y) && (dn.x < dn.y) && (dn.z > -dn.y) && (dn.z < dn.y))
+					pcf = ComputePCF(frag_viewpos, psm_5_projection_matrix, psm_5);
+			else	if	((dn.y < 0.0) && (dn.x > dn.y) && (dn.x < -dn.y) && (dn.z > dn.y) && (dn.z < -dn.y))
+					pcf = ComputePCF(frag_viewpos, psm_4_projection_matrix, psm_4);
+
+			return pcf;
+		}
+
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Compute ray entry and exit points.
+			vec3	d_ray = normalize(frag_viewpos),
+					dst = -position_view_space;
+
+			float	B = dot(dst, d_ray),
+					C = dot(dst, dst) - volumetric_range * volumetric_range,
+					D = B * B - C;
+
+			if	(D <= 0.0)
+				discard;
+
+			// Sample volume.
+			float	fT0 = -B - sqrt(D),
+					fT1 = -B + sqrt(D);
+			if	(fT1 < 0.0)
+				discard;
+
+			fT0 = max(fT0, 0.0);
+			fT1 = min(length(frag_viewpos), fT1);
+
+			// Evaluate dust on light path.
+			vec3	dust_sp = d_ray * fT0,
+					dust_dt = d_ray * volumetric_step;
+
+			float	total_contribution = 0.0,
+					contribution = volumetric_step / (volumetric_range * 2.0);
+			float	d_squared = fT1 * fT1;
+
+			float	max_step = 0.0;
+			while	(dot(dust_sp, dust_sp) < d_squared)
+			{
+				total_contribution += contribution * EvaluatePCF(dust_sp);
+				dust_sp += dust_dt;
+
+				max_step += 1.0;
+				if	(max_step > 500.0)
+					break;
+			}
+
+			gl_FragColor = vec4(volumetric_color, total_contribution * volumetric_thickness);
+		}
+	">
+>
+
+<VolumetricCone =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							framebuffer_fx_scaler;
+
+		uniform vec3		volumetric_color,
+							position_view_space,
+							direction_view_space;
+
+		uniform	float		cone_angle,
+							volumetric_range,
+							volumetric_thickness;
+
+		uniform	sampler2D	gbuffer0;
+
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset);
+
+			// Compute ray entry and exit points.
+			vec3	direction_ray = normalize(frag_viewpos);
+			float	fAdD = dot(direction_view_space, direction_ray),
+					fCosSqr = cone_angle * cone_angle;
+
+			vec3	kE = -position_view_space;
+
+			float	fAdE = dot(direction_view_space, kE),
+					fDdE = dot(direction_ray, kE),
+					fEdE = dot(kE, kE);
+			float	fC2 = fAdD * fAdD - fCosSqr,
+					fC1 = fAdD * fAdE - fCosSqr * fDdE,
+					fC0 = fAdE * fAdE - fCosSqr * fEdE;
+
+			float	fDiscr = fC1 * fC1 - fC0 * fC2;
+			if	(fDiscr <= 0.0)
+				discard;
+
+			float	fRoot = sqrt(fDiscr),
+					fInvC2 = 1.0 / fC2;
+			float	fT0 = (-fC1 + fRoot) * fInvC2,
+					fT1 = fC2 < 0.0 ? (-fC1 - fRoot) * fInvC2 : 2000.0;
+
+			vec3	entry_point = fT0 * direction_ray;
+
+			if	(dot(position_view_space - entry_point, direction_view_space) > 0.0)
+				discard;
+
+			// Sample volume.
+			float   thickness = clamp((min(length(frag_viewpos), fT1) - fT0) / volumetric_range, 0.0, 1.0);
+			gl_FragColor = vec4(volumetric_color, thickness * volumetric_thickness);
+		}
+	">
+>
+
+<VolumetricConeShadowMap =
+	<Vertex = "
+		varying	vec3		forward;
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+			forward = (gl_ModelViewMatrix * gl_Vertex).xyz;
+		}
+	">
+	<Pixel = "
+		varying	vec3		forward;
+
+		uniform	vec2		inverse_buffer_size;
+		uniform	float		view_depth_offset,
+							framebuffer_fx_scaler,
+							shadow_bias;
+
+		uniform vec3		volumetric_color,
+							position_view_space,
+							direction_view_space;
+
+		uniform	float		cone_angle,
+							inverse_shadowmap_size,
+							volumetric_range,
+							volumetric_step,
+							volumetric_thickness;
+
+		uniform	sampler2D	gbuffer0;
+		uniform	sampler2DShadow	volume_view_depth_texture;
+
+		uniform	mat4		volume_projection_matrix;
+
+		//---------------------------
+		float	EvaluatePCF(vec3 pjb)
+		{
+/*
+			// 2x2 PCF TAP.
+			float	pcf_tap = 0.0;
+			for (float v = 0; v < 2.0; ++v)
+				for (float u = 0; u < 2.0; ++u)
+					pcf_tap += shadow2D(volume_view_depth_texture, pjb + vec3(u, v, 0.0) * inverse_shadowmap_size).r;
+
+			return pcf_tap / 4.0;
+*/
+			return shadow2D(volume_view_depth_texture, pjb).r;
+		}
+
+		#(UnpackNormalDepth)
+
+		//------------
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	norm_dpth = UnpackNormalDepth(UV);
+			vec3	frag_viewpos = (forward / forward.z) * (norm_dpth.w + view_depth_offset - shadow_bias);
+
+			// Compute ray entry and exit points.
+			vec3	direction_ray = normalize(frag_viewpos);
+			float	fAdD = dot(direction_view_space, direction_ray),
+					fCosSqr = cone_angle * cone_angle;
+
+			vec3	kE = -position_view_space;
+
+			float	fAdE = dot(direction_view_space, kE),
+					fDdE = dot(direction_ray, kE),
+					fEdE = dot(kE, kE);
+			float	fC2 = fAdD * fAdD - fCosSqr,
+					fC1 = fAdD * fAdE - fCosSqr * fDdE,
+					fC0 = fAdE * fAdE - fCosSqr * fEdE;
+
+			float	fDiscr = fC1 * fC1 - fC0 * fC2;
+			if	(fDiscr < 0.0)
+				discard;
+
+			float	fRoot = sqrt(fDiscr),
+					fInvC2 = 1.0 / fC2;
+			float	fT0 = (-fC1 + fRoot) * fInvC2,
+					fT1 = (-fC1 - fRoot) * fInvC2;
+
+			// Trace correct cone.
+			float	k0 = dot(position_view_space - fT0 * direction_ray, direction_view_space),
+					k1 = dot(position_view_space - fT1 * direction_ray, direction_view_space);
+			if	((k0 > 0.0) && (k1 > 0.0))
+				discard;
+
+			if	(fC2 > 0.0)
+			{
+				if	(k0 > 0.0)
+					fT0 = 0.0;
+				if	(k1 > 0.0)
+					fT1 = 64000.0;
+			}
+
+			// Cap cone at range.
+			if	(volumetric_range > 0.0)
+			{
+				float	t = dot(position_view_space + direction_view_space * volumetric_range, direction_view_space) / fAdD;
+
+				// Which side of the plane is view on.
+				if	(fAdD >= 0.0)	// Cone origin side.
+					fT1 = min(t, fT1);
+				else				// Outside cone space.
+					fT0 = max(t, fT0);
+			}
+
+			// Sample volume.
+			fT0 = max(0.0, fT0);
+
+			vec3	sample = direction_ray * fT0;
+			float	sample_length = 0.0,
+					frag_length = length(frag_viewpos),
+					max_length = min(frag_length, fT1) - fT0;
+			vec3	sample_step = direction_ray * volumetric_step;
+
+			float   thickness = (min(frag_length, fT1) - fT0) / volumetric_range;
+
+			float	total_contribution = 0.0,
+					contribution = volumetric_step / volumetric_range;
+
+			float	max_step = 0.0;
+			while	(sample_length < max_length)
+			{
+				sample += sample_step;
+				sample_length += volumetric_step;
+
+				vec4	frag_lightpos = volume_projection_matrix * vec4(sample, 1.0);
+				vec3	pj_biased = ((frag_lightpos.xyz / frag_lightpos.w) + 1.0) * 0.5;
+				total_contribution += contribution * EvaluatePCF(pj_biased);
+
+				max_step += 1.0;
+				if	(max_step > 1000.0)
+					break;
+			}
+
+			// Adjust sample length to exact intersection.
+			gl_FragColor = vec4(volumetric_color, clamp(total_contribution * thickness * volumetric_thickness, 0.0, 1.0));
+		}
+	">
+>

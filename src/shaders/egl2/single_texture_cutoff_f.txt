@@ -1,0 +1,9 @@
+uniform sampler2D	u_tex;
+uniform float		u_fx_scale, u_cutoff;
+varying	vec2		v_uv;
+
+void	main()
+{
+	vec4	ref = texture2D(u_tex, v_uv * u_fx_scale);
+	gl_FragColor = vec4(max(ref.rgb - u_cutoff, 0.0), ref.a);
+}

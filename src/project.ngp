@@ -1,12 +1,12 @@
 <NML=1.0>
 <Environment=
-	<Name="AGFX_game_RLC">
+	<Name="AGFX_Game_ShiftBomber">
 	<Authors="AndyGFX">
 	<Description="New project">
-	<Copyright="Copyright 2011">
+	<Copyright="Copyright 2010">
 	<ScriptUnit=
-		<Script="scripts/project/agfx_game_rlc.nut">
-		<Class="AGFX_game_RLC">
+		<Script="Scripts/agfx_game_shiftbomber.nut">
+		<Class="AGFX_Game_ShiftBomber">
 	>
 	<Include>
 	<SearchPaths>

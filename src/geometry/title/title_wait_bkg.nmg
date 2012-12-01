@@ -1,0 +1,38 @@
+<NML=1.0>
+<Geometry=
+	<RenderWord>
+	<Vertex=
+		<Count=4>
+		<Data==48:48@
+**Êê**Êê***ª**Êj**Êê***ª**Êj**Êj***ª**Êê**Êj***ª>
+	>
+	<Polygon=
+		<Count=1>
+		<BindingCount=4>
+		<Data==24:24@
+.***-***,***+***********>
+	>
+	<PNormal=
+		<Count=1>
+		<Data==3:3@
+**«>
+	>
+	<VNormal=
+		<Count=4>
+		<Data==12:12@
+**«**«**«**«>
+	>
+	<VTangent=
+		<Count=4>
+		<Data==24:24@
+*«*«***«*«***«*«***«*«**>
+	>
+	<UV=
+		<Count=1>
+		<Data==32:32@
+******ªi**********ªi******ªi**ªi>
+	>
+	<Materials=
+		<MaterialRef="geometry/title/matwait_black.nmm">
+	>
+>

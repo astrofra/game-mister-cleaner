@@ -4,7 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-AddReal	.\vector2.nut	/^	function	AddReal(k)		{	return Vector2(x + k, y + k);		}$/;"	f	class:Vector2	file:
 Alloc	.\oo\picture.nut	/^	function		Alloc(...)$/;"	f	class:Picture	file:
 ApplyConvolution	.\oo\picture.nut	/^	function        ApplyConvolution(kernel_width, kernel_height, kernel)$/;"	f	class:Picture	file:
 Camera	.\oo\camera.nut	/^class		Camera	extends	ItemDerived$/;"	c	file:
@@ -26,9 +25,8 @@ DebugPath	.\oo\scene.nut	/^	function        DebugPath()$/;"	f	class:Scene	file:
 DebugPhysicSystem	.\oo\scene.nut	/^	function        DebugPhysicSystem()$/;"	f	class:Scene	file:
 DeleteContent	.\oo\scene.nut	/^	function        DeleteContent()$/;"	f	class:Scene	file:
 Dist	.\vector2.nut	/^	function    Dist(b)         {	return (b - this).Len();	}$/;"	f	class:Vector2	file:
-DivReal	.\vector2.nut	/^	function	DivReal(k)		{	local i = 1.0 \/ k; return Vector2(x * i, y * i);		}$/;"	f	class:Vector2	file:
-DrawBillboardQuad	.\billboard.nut	/^function	DrawBillboardQuad(matrix, center, size, color = Vector(1, 1, 1), flag = MaterialRenderDefault)$/;"	f
-DrawBillboardQuadTextured	.\billboard.nut	/^function	DrawBillboardQuadTextured(matrix, center, size, texture, uvmin = UV(0, 0), uvmax = UV(1, 1), color = Vector(1, 1, 1), flag = MaterialRenderDefault)$/;"	f
+DrawBillboardQuad	.\billboard.nut	/^function	DrawBillboardQuad(matrix, center, size, color = Vector(1, 1, 1), blend = MaterialBlendNone, flag = MaterialRenderDefault)$/;"	f
+DrawBillboardQuadTextured	.\billboard.nut	/^function	DrawBillboardQuadTextured(matrix, center, size, texture, uvmin = UV(0, 0), uvmax = UV(1, 1), color = Vector(1, 1, 1), blend = MaterialBlendNone, flag = MaterialRenderDefault)$/;"	f
 EndReplay	.\oo\scene.nut	/^	function		EndReplay()$/;"	f	class:Record	file:
 Engine	.\oo\engine.nut	/^class		Engine$/;"	c	file:
 Fill	.\oo\picture.nut	/^	function		Fill(...)$/;"	f	class:Picture	file:
@@ -97,7 +95,6 @@ Motion	.\oo\motion.nut	/^class		Motion$/;"	c	file:
 Mtr	.\math.nut	/^function	Mtr(v)	{	return v;	}$/;"	f
 MtrToKm	.\math.nut	/^function	MtrToKm(v)	{	return v \/ 1000.0;	}$/;"	f
 Mtrs	.\math.nut	/^function	Mtrs(v)	{	return v;	}$/;"	f
-MulReal	.\vector2.nut	/^	function	MulReal(k)		{	return Vector2(x * k, y * k);		}$/;"	f	class:Vector2	file:
 Normalize	.\math.nut	/^function	Normalize(v, a, b)$/;"	f
 Normalize	.\vector2.nut	/^	function	Normalize(length = 1.0)$/;"	f	class:Vector2	file:
 Null	.\oo\texture.nut	/^	function        Null()$/;"	f	class:Texture	file:
@@ -149,7 +146,6 @@ Snapshot	.\oo\scene.nut	/^	function		Snapshot()$/;"	f	class:Record	file:
 Sound	.\oo\sound.nut	/^class		Sound$/;"	c	file:
 StartInterlacedSequence	.\oo\raytracer.nut	/^	function		StartInterlacedSequence()$/;"	f	class:Raytracer	file:
 StartReplay	.\oo\scene.nut	/^	function		StartReplay()$/;"	f	class:Record	file:
-SubReal	.\vector2.nut	/^	function	SubReal(k)		{	return Vector2(x - k, y - k);		}$/;"	f	class:Vector2	file:
 TextRender	.\oo\picture.nut	/^	function		TextRender(rect, text, font, parm)$/;"	f	class:Picture	file:
 Texture	.\oo\texture.nut	/^class		Texture$/;"	c	file:
 TimeoutHandler	.\timeout_handler.nut	/^class		TimeoutHandler$/;"	c	file:

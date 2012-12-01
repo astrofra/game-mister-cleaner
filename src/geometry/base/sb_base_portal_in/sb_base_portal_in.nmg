@@ -1,0 +1,65 @@
+<NML=1.0>
+<Geometry=
+	<RenderWord=
+		<Lit>
+	>
+	<Vertex=
+		<Count=48>
+		<Data==588:576@
+********S†ùh§0þç****Ð‹òh|ê6çAxh¢ošh¹%=@fAxhÝ‡›h÷övè****-Ýhöúº
+è****RŠ½h®6>èAxhVih™ÝççAxhÙP‰hÑ†Ûè****¯{htüïè****mgóg‡èAx
+hé›âg¯RièAxh@®<h÷ööè****4Íetüïè****òóçêP•èAxh´æ%h–èAxh|)
+fÑ†Ûè****>Øqèöúºè****šk¸èå7dèAxhö8è 1„èAxh)ŸÝç÷övè****u÷Øè§0þ
+ç****líèx^ØçAxh:I‚èˆ7èAxhö3dè********›gôè§0þg****líè|ê6gAx
+h12è¹%=@æAxhmJ‘è÷övh****u÷Øèöúºh****šk¸è®6>hAxh-^è™ÝçgAxhh
+~èÑ†Ûh****>Øqètüïh****òóçóg‡hAxh Íç¯RihAxhÐp2è÷ööh****4Íetü
+ïh****mgêP•hAxh^eKg%h–hAxh÷/ØæÑ†Ûh****¯{höúºh****RŠ½hå7dhA
+xhgUCh 1„hAxh=Jñg÷övh****-Ýh§0þg****Ð‹òhx^ØgAxh«†Œhˆ7hAxhg
+qnh>
+	>
+	<Polygon=
+		<Count=12>
+		<BindingCount=48>
+		<Data==293:288@
+.***-***,***+***********.***1***0***/***.*******.***5***4***3***
+2*******.***9***8***7***6*******.***=}***<***;***:*******.***A**
+*@***?***>*******.***E***D***C***B*******.***I***H***G***F******
+*.***M***L***K***J*******.***Q***P***O***N*******.***U***T***S**
+*R*******.***Y***X***W***V*******>
+	>
+	<PNormal=
+		<Count=12>
+		<Data==36:36@
+)xŽ÷xÓxZÆx)Õx÷úxÓ+xÆ]xÕxúŽx+x]Zx>
+	>
+	<VNormal=
+		<Count=48>
+		<Data==146:144@
+|Š|Š|Š|Šð|vð|vð|vð|vÑ|OÑ|OÑ|OÑ|OÊ|Ê|Ê|Ê|Þ|ðÞ|ðÞ|ðÞ|ð|Ñ
+|Ñ|Ñ|Ñ6|Ê6|Ê6|Ê6|Êd|Þd|Þd|Þd|Þƒ|ƒ|ƒ|ƒ|Š|6Š|6Š|6Š|6v|dv|dv|
+dv|dO|ƒO|ƒO|ƒO|ƒ>
+	>
+	<VTangent=
+		<Count=48>
+		<Data==300:288@
+¬# )Ê|¬# )Ê|¬# )Ê|¬# )Ê|Â#â=@ÊpÂ#â=@ÊpÂ#â=@ÊpÂ#â=@Êpô#¸âÊQô#¸âÊQ
+ô#¸âÊQô#¸âÊQ4#¬ØÊ)4#¬ØÊ)4#¬ØÊ)4#¬ØÊ)r#ÂäÊ=@r#ÂäÊ=@r#ÂäÊ=@r#ÂäÊ=@
+œ#ôÊâœ#ôÊâœ#ôÊâœ#ôÊâ¨#4+ÊØ¨#4+ÊØ¨#4+ÊØ¨#4+ÊØ’#rTÊä’#rTÊä’#rT
+Êä’#rTÊä`#œrÊ`#œrÊ`#œrÊ`#œrÊ #¨|Ê+ #¨|Ê+ #¨|Ê+ #¨|Ê+â#’pÊTâ#
+’pÊTâ#’pÊTâ#’pÊT¸#`QÊr¸#`QÊr¸#`QÊr¸#`QÊr>
+	>
+	<UV=
+		<Count=1>
+		<Data==392:384@
+))\*)<ew@\g*)<ew@\g**ªi))\**ªiw@Üg*)<eëº/h*)<eëº/h**ªiw@Üg**ªi
+j@\h*)<eéÅˆh*)<eéÅˆh**ªij@\h**ªiëº¯h*)<eªýÅh*)<eªýÅh**ªiëº¯h**ªi
+j@Üh*)<e)‚òh*)<e)‚òh**ªij@Üh**ªiÅh*)<eÊh*)<eÊh**ªiÅh**ªi
+Úº/i*)<e:Ü:i*)<e:Ü:i**ªiÚº/i**ªiªýEi*)<e=JPi*)<e=JPi**ªiªýEi**
+ªij@\i*)<eÊagi*)<eÊagi**ªij@\i**ªi:ƒri*)<eš¤}i*)<eš¤}i**ªi:ƒri**
+ªiúÅˆi*)<eZç“i*)<eZç“i**ªiúÅˆi**ªiÊži*)<e**ªi*)<e**ªi**ªiÊži**
+ªi>
+	>
+	<Materials=
+		<MaterialRef="geometry/base/sb_base_portal_in/matportalfx.nmm">
+	>
+>

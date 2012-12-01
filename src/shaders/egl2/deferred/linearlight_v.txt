@@ -1,0 +1,8 @@
+attribute vec4		a_position;
+varying	vec3		forward;
+
+void	main()
+{
+	gl_Position = a_position;
+	forward = a_position.xyz;
+}

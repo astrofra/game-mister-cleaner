@@ -1,0 +1,17 @@
+uniform	vec2		u_ibs;
+uniform vec3		u_fog_col;
+uniform float		u_fog_near, u_fog_irange, u_znear, u_zfar;
+uniform	sampler2D	u_depth;
+
+float	decodeDepthBuffer(sampler2D	depth, vec2 UV)
+{
+	float	z_b = texture2D(depth, UV).x;
+	return 0.5 * (u_znear * u_zfar) / (u_zfar - z_b * (u_zfar - u_znear));
+}
+
+void	main()
+{
+	vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * u_ibs;
+	float	z_e = decodeDepthBuffer(u_depth, UV);
+	gl_FragColor = vec4(u_fog_col, clamp((z_e - u_fog_near) * u_fog_irange, 0.0, 1.0));
+}

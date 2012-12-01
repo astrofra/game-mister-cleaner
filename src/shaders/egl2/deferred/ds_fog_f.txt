@@ -1,0 +1,13 @@
+uniform	vec2		u_ibs;
+uniform vec3		u_fog_col;
+uniform float		u_fog_near, u_fog_irange;
+uniform	sampler2D	gbuffer0;
+
+#(UnpackNormalDepth)
+
+void	main()
+{
+	vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * u_ibs;
+	vec4	norm_dpth = UnpackNormalDepth(UV);
+	gl_FragColor = vec4(u_fog_col, clamp((norm_dpth.w - u_fog_near) * u_fog_irange, 0.0, 1.0));
+}

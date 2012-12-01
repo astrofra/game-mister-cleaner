@@ -1,0 +1,22 @@
+<NML = 1.0>
+
+<Ambient =
+	<Vertex = "
+		void	main()
+		{
+			gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+		}
+	">
+	<Pixel = "
+		uniform	vec2		inverse_buffer_size;
+		uniform	sampler2D	gbuffer1, gbuffer3;
+
+		void	main()
+		{
+			vec2	UV = vec2(gl_FragCoord.x, gl_FragCoord.y) * inverse_buffer_size;
+			vec4	diff_alpha = texture2D(gbuffer1, UV);
+			vec4	cons_resv = texture2D(gbuffer3, UV);
+			gl_FragColor = vec4(cons_resv.rgb + diff_alpha.rgb * gl_LightModel.ambient.rgb, diff_alpha.a);
+		}
+	">
+>
