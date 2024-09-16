@@ -1,0 +1,160 @@
+body {
+	background-color: #2A2A2A;
+	font-size:10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing:0.5px;
+	padding:0px;
+	margin:0px;
+	text-align:center;
+}
+
+a{
+	font-size:13px;
+	letter-spacing:0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+a:link {
+color: #00b4ff;
+}
+a:visited {
+color: #c673b1;
+}
+a:hover {
+color: #00d2ff;
+background-color: #464646;
+text-decoration: none;
+}
+a:active {
+color: #9ae4ff;
+}
+
+Paragraph {
+	font: bold 28px Century Gothic, Arial, sans-serif;
+	font-size:10px;
+	letter-spacing:0px;
+}
+
+h1, h2 {
+	font: bold 28px Century Gothic, Arial, sans-serif;
+	letter-spacing:0px;
+}
+h1 {
+	margin: 0;
+	font-size:20px;
+	padding: 0;
+}
+
+h2 {
+	color: #ffd200;
+	font-size:18px;
+	text-align: left;
+}
+
+h5 {
+	font-size:13px;
+	letter-spacing:0px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+
+h6 {
+	font: bold 28px Century Gothic, Arial, sans-serif;
+	font-size:11px;
+	letter-spacing:0px;
+}
+
+#header {
+	text-align: left;
+	color:#000;
+	background-color: #ee0;
+	margin:0;
+	border-bottom: 1px solid #fff;
+	padding:5px;
+}
+
+#container {
+	width: 620px;
+	padding: 10px;
+	margin: 30px auto;
+	display: table;
+}
+
+#download {
+	color: #aac;
+	padding-left: 30px;
+}
+#download a {
+	color: #115;
+	text-decoration: none;
+	font: bold 12px Arial, sans-serif;
+}
+
+#info,
+#main {
+	font: bold 11px Arial, sans-serif;
+	text-align: left;
+	letter-spacing: 0px;
+	width: 200px;
+	display: block;
+	float: left;
+	margin-right: 11px;
+	color: #ccc;
+}
+#main img {
+	border: 2px solid #aaa;
+}
+#container a {
+	color: #c88;
+	text-decoration: none;
+}
+#container a:hover{color: #fff;}
+
+
+
+
+#main {
+	padding: 0 10px;
+	border-left: 0px dotted #333;
+	width: 360px;
+	margin: 0 auto;
+	background-color: transparent;
+	display: block;
+	float: left;
+}
+#main ul {
+	margin: 0;
+	padding: 0;
+}
+#main li {
+	font: bold 11px Arial, sans-serif;
+	text-align: left;
+	letter-spacing: 0px;
+	list-style-type: none;
+	padding: 3px 0;
+	border-bottom: 1px dotted #446;
+}
+#main li.o {color: #aac;}
+#main li.l {color: #aac;border-bottom-width: 0}
+#main li.e {color: #ccc;}
+
+#main li span.artist {
+	display: block;
+	float: left;
+	width: 145px;
+}
+#main li span.h {
+	display: none;
+}
+
+
+#footer {
+	text-align:center;
+	color: #4c1532;
+	font: bold 18px Arial, sans-serif;
+	margin-bottom:20px;
+	letter-spacing: 34px;
+   }
