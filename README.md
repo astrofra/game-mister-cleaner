@@ -18,10 +18,13 @@ In a distant future, a scientific experiment goes awry, dispersing radioactive s
 
 <br>
 
+![Preview 0](img/thumb_era_00.jpg)
 ![Preview 1](img/thumb_era_01.jpg)
 ![Preview 2](img/thumb_era_02.jpg)
+<br>
 ![Preview 3](img/thumb_era_03.jpg)
 ![Preview 4](img/thumb_era_04.jpg)
+![Preview 5](img/thumb_era_05.jpg)
 
 ## How to Play
 
