@@ -16,6 +16,13 @@ In a distant future, a scientific experiment goes awry, dispersing radioactive s
 - **High-Quality Graphics:** Features complex shaders, realtime shadows, and volumetric atmosphere rendering.
 - **Dynamic Audio:** Encompasses 20 music tracks across a broad range of styles.
 
+<br>
+
+![Preview 1](img/thumb_era_01.jpg)
+![Preview 2](img/thumb_era_02.jpg)
+![Preview 3](img/thumb_era_03.jpg)
+![Preview 4](img/thumb_era_04.jpg)
+
 ## How to Play
 
 Control Mr. Cleaner using simple commands:
